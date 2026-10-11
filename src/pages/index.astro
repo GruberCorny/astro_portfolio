@@ -1,17 +1,207 @@
 ---
+import { Picture, type ImageMetadata } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/home.css";
 
+import appPreview from "../../public/projects/app/screen1.png";
+import bitburnerPreview from "../../public/projects/bitburner/terminal.png";
+import revxtPreview from "../../public/projects/revxt/fritz-feature_map_encoding.png";
+import profileImage from "../../public/profile.jpg";
+
+const projects: Array<{
+	category: string;
+	title: string;
+	description: string;
+	image: ImageMetadata;
+	alt: string;
+	link: string;
+}> = [
+	{
+		category: "Web & App",
+		title: "App-Entwicklung",
+		description:
+			"Von der Idee bis zum nutzbaren Produkt – strukturiert, verständlich und direkt im Einsatz.",
+		image: appPreview,
+		alt: "App-Entwicklung – Projektvorschau",
+		link: "/projects/app-entwicklung",
+	},
+	{
+		category: "Game & Scripting",
+		title: "Bitburner",
+		description:
+			"Automatisierung, Strategie und Programmier-Logik, die direkt im Spiel zu spürbaren Ergebnissen führen.",
+		image: bitburnerPreview,
+		alt: "Bitburner – Projektvorschau",
+		link: "/projects/bitburner",
+	},
+	{
+		category: "System & Forschung",
+		title: "RevXT",
+		description:
+			"Ein technisches Projekt mit klaren Zielen, experimenteller Entwicklung und schnellen Iterationen.",
+		image: revxtPreview,
+		alt: "RevXT – Projektvorschau",
+		link: "/projects/revxt",
+	},
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Hallo Welt</title>
-	</head>
-	<body>
-		<h1>Hallo Welt</h1>
-	</body>
-</html>
+<BaseLayout title="Corny Gruber – Portfolio">
+	<section class="hero">
+		<div class="hero-content">
+			<hgroup>
+				<p class="h5">Hallo, ich bin</p>
+				<h1 class="hero-title">Gruber Cornelius</h1>
+			</hgroup>
+			<p class="hero-subtitle">
+				Ich entwickle Web-Apps, Embedded-Systeme und alles dazwischen –
+				bodenständig, präzise und mit echtem Interesse an der Sache.
+			</p>
+			<div class="hero-cta">
+				<a href="/about" class="btn-primary">Mehr über mich</a>
+				<a href="/projects/app-entwicklung" class="btn-secondary"
+					>Projekte ansehen</a
+				>
+			</div>
+		</div>
+		<div class="hero-visual">
+			<Picture
+				loading="eager"
+				src={profileImage}
+				alt="Corny Gruber"
+				class="hero-avatar"
+				width={220}
+				height={220}
+				widths={[220, 440]}
+				sizes="(max-width: 720px) 160px, 220px"
+				formats={["avif", "webp", "jpeg"]}
+				quality={80}
+			/>
+		</div>
+		<div class="skills-strip">
+			<span class="badge">Web Dev</span>
+			<span class="badge">Embedded Systems</span>
+			<span class="badge">Assembly x86</span>
+			<span class="badge">SQL</span>
+			<span class="badge">Godot</span>
+		</div>
+	</section>
+
+	<section class="project-showcase" aria-label="Projektvorschau">
+		<hgroup class="section-heading">
+			<p class="eyebrow">Projekte</p>
+			<h2>Kurze Einblicke in meine Arbeiten</h2>
+		</hgroup>
+
+		<div class="project-showcase-shell">
+			<button
+				class="project-nav project-prev"
+				type="button"
+				aria-label="Vorheriges Projekt"
+			>
+				&#8249;
+			</button>
+
+			<div class="project-showcase-stage" id="project-showcase-stage">
+				{
+					projects.map((project, index) => (
+						<article
+							class:list={[
+								"project-slide",
+								index === 0 && "is-active",
+							]}
+							data-index={index}
+							aria-hidden={index === 0 ? "false" : "true"}
+						>
+							<a href={project.link} class="project-slide-link">
+								<Picture
+									loading="eager"
+									src={project.image}
+									alt={project.alt}
+									class="project-slide-bg"
+									widths={[640, 960, 1280]}
+									sizes="(max-width: 720px) 100vw, 1200px"
+									formats={["avif", "webp", "jpeg"]}
+									quality={72}
+								/>
+								<div class="project-slide-overlay" />
+								<div class="project-slide-content">
+									<span class="project-pill">
+										{project.category}
+									</span>
+									<h3>{project.title}</h3>
+									<p>{project.description}</p>
+									<span class="project-cta">
+										Projekt ansehen
+									</span>
+								</div>
+							</a>
+						</article>
+					))
+				}
+			</div>
+
+			<button
+				class="project-nav project-next"
+				type="button"
+				aria-label="Nächstes Projekt"
+			>
+				&#8250;
+			</button>
+		</div>
+	</section>
+
+	<!-- TODO: kurzzusammenfasung von about me -->
+	<section class="core-section">
+		<hgroup>
+			<p class="eyebrow">Was ich mache</p>
+			<h2>Drei Welten, eine Denkweise.</h2>
+		</hgroup>
+		<div class="cards-grid">
+			<div class="card">
+				<div class="card-icon">&#128421;</div>
+				<h3>Web & App-Entwicklung</h3>
+				<p>
+					Von der Idee zur laufenden Applikation – Frontend, Backend
+					und alles, was dazwischen liegt.
+				</p>
+			</div>
+			<div class="card">
+				<div class="card-icon">&#128268;</div>
+				<h3>Embedded Systems</h3>
+				<p>
+					Microcontroller, Low-Level-Programmierung und Hardware-nahe
+					Software – wo Code auf Silizium trifft.
+				</p>
+			</div>
+			<div class="card">
+				<div class="card-icon">&#127918;</div>
+				<h3>Game & Scripting</h3>
+				<p>
+					Godot-Projekte und Automation-Scripts – kreatives
+					Problemlösen mit Spaßaktor.
+				</p>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<script>
+	const slides = Array.from(document.querySelectorAll(".project-slide"));
+	const prevButton = document.querySelector(".project-prev");
+	const nextButton = document.querySelector(".project-next");
+	let activeIndex = 0;
+
+	function updateSlider(newIndex: number) {
+		activeIndex = (newIndex + slides.length) % slides.length;
+
+		slides.forEach((slide, index) => {
+			const isActive = index === activeIndex;
+			slide.classList.toggle("is-active", isActive);
+			slide.setAttribute("aria-hidden", String(!isActive));
+		});
+	}
+
+	prevButton?.addEventListener("click", () => updateSlider(activeIndex - 1));
+	nextButton?.addEventListener("click", () => updateSlider(activeIndex + 1));
+</script>

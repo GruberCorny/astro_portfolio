@@ -1,0 +1,400 @@
+---
+import { Image, Picture } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/about.css";
+
+import profileImage from "../../public/profile.jpg";
+import sproutIcon from "../../public/icons/sprout.svg";
+import brainIcon from "../../public/icons/brain-circuit.svg";
+import stoneIcon from "../../public/icons/stone.svg";
+import shieldIcon from "../../public/icons/shield-check.svg";
+---
+
+<BaseLayout title="About Me – Corny Gruber">
+    <!-- Wer bin ich -->
+    <section class="about-hero">
+        <Picture
+            loading="eager"
+            src={profileImage}
+            alt="Corny Gruber"
+            class="about-photo"
+            width={240}
+            height={240}
+            widths={[240, 480]}
+            sizes="(max-width: 720px) 140px, 240px"
+            formats={["avif", "webp", "jpeg"]}
+            quality={86}
+        />
+        <div class="about-intro">
+            <p class="section-label">Wer bin ich</p>
+            <h1>Corny Gruber</h1>
+            <p>
+                Aufgewachsen auf einem Bauernhof, hab ich früh gelernt, dass
+                gute Arbeit Geduld, Sorgfalt und ein ehrliches Interesse an der
+                Sache braucht. Dieses Denken nehme ich in jeden Code, den ich
+                schreibe.
+            </p>
+            <p>
+                Ich entwickle Web-Applikationen, Embedded-Systeme und alles, was
+                mich intellektuell fordert – ohne Bullshit, ohne übertriebenes
+                Selbstmarketing.
+            </p>
+        </div>
+    </section>
+
+    <!-- Wie bin ich -->
+    <section class="personality-section">
+        <p class="section-label">Wie bin ich</p>
+        <h2>Persönlichkeit & Werte</h2>
+        <div class="traits-grid">
+            <div class="trait-card">
+                <div class="trait-icon">
+                    <Image
+                        loading="eager"
+                        src={sproutIcon}
+                        alt="Sprout"
+                        width={30}
+                        height={30}
+                        quality={100}
+                    />
+                </div>
+                <h3>Bodenständig</h3>
+                <p>
+                    Kein Hype, kein Overengineering. Ich baue, was gebraucht
+                    wird – solide und wartbar.
+                </p>
+            </div>
+            <div class="trait-card">
+                <div class="trait-icon">
+                    <Image
+                        loading="eager"
+                        src={brainIcon}
+                        alt="Brain"
+                        width={30}
+                        height={30}
+                        quality={100}
+                    />
+                </div>
+                <h3>Neugierig</h3>
+                <p>
+                    Von Assembly bis Pflanzenkunde: Wenn mich etwas
+                    interessiert, tauch ich tief ein.
+                </p>
+            </div>
+            <div class="trait-card">
+                <div class="trait-icon">
+                    <Image
+                        loading="eager"
+                        src={stoneIcon}
+                        alt="Stone"
+                        width={30}
+                        height={30}
+                        quality={100}
+                    />
+                </div>
+                <h3>Ruhig & Gelassen</h3>
+                <p>
+                    Stress löst keine Probleme. Ich denke erst nach, bevor ich
+                    handle.
+                </p>
+            </div>
+            <div class="trait-card">
+                <div class="trait-icon">
+                    <Image
+                        loading="eager"
+                        src={shieldIcon}
+                        alt="Shield"
+                        width={30}
+                        height={30}
+                        quality={100}
+                    />
+                </div>
+                <h3>Ehrlich</h3>
+                <p>
+                    „What you see is what you get.“ Ich sage, was ich denke –
+                    respektvoll und direkt.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Was kann ich -->
+    <section class="skills-section">
+        <p class="section-label">Was kann ich</p>
+        <h2>Hard Skills & Werkzeuge</h2>
+        <div class="skills-columns">
+            <div class="skills-group">
+                <h3>Frontend</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span>HTML</span>
+                        <div class="skill-logos">
+                            <Image
+                                loading="eager"
+                                src="/logos/html-5-no-wordmark-svgrepo-com.svg"
+                                alt="HTML5"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>CSS</span>
+                        <div class="skill-logos">
+                            <Image
+                                loading="eager"
+                                src="/logos/css-3-svgrepo-com.svg"
+                                alt="CSS3"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-logos">
+                            <Image
+                                loading="eager"
+                                src="/logos/js-svgrepo-com.svg"
+                                alt="JavaScript"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>TypeScript</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/typescript-icon-svgrepo-com.svg"
+                                alt="TypeScript"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Astro</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/astro-original.svg"
+                                alt="Astro"
+                                width={22}
+                                height={22}
+                                quality={100}
+                                class="logo-dark"
+                            />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skills-group">
+                <h3>Backend & Systems</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span>C</span>
+                        <div class="skill-logos">
+                            <Image
+                                loading="eager"
+                                src="/logos/c-svgrepo-com.svg"
+                                alt="C"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Java</span>
+                        <div class="skill-logos">
+                            <Image
+                                loading="eager"
+                                src="/logos/java-svgrepo-com.svg"
+                                alt="Java"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Kotlin</span>
+                        <div class="skill-logos">
+                            <Image
+                                loading="eager"
+                                src="/logos/Kotlin_icon_(2021-present).svg"
+                                alt="Kotlin"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Python</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/python-svgrepo-com.svg"
+                                alt="Python"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>SQL</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/sql-database-generic-svgrepo-com.svg"
+                                alt="SQL"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skills-group">
+                <h3>Embedded</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span>Assembly x86</span>
+                        <Image
+                            src="/logos/ASM-logo.svg"
+                            alt="Assembly x86"
+                            width={22}
+                            height={22}
+                            quality={100}
+                        />
+                    </li>
+                    <li class="skill-item">
+                        <span>Arduino</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/arduino-svgrepo-com.svg"
+                                alt="Arduino"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Fritzing</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/fritzing.svg"
+                                alt="Fritzing"
+                                width={22}
+                                height={22}
+                                quality={100}
+                                class="logo-dark"
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Atmel / Microchip Studio</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/AtmelStudio-Bug-White-With-BG.svg"
+                                alt="Atmel"
+                                width={22}
+                                height={22}
+                                quality={100}
+                                class="logo-dark"
+                            />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skills-group">
+                <h3>Tools</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span>Git</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/git-icon-svgrepo-com.svg"
+                                alt="Git"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>VS Code</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/vs-code-svgrepo-com.svg"
+                                alt="VS Code"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Bash</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/bash-icon-svgrepo-com.svg"
+                                alt="Bash"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Docker</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/docker-svgrepo-com.svg"
+                                alt="Docker"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <span>Godot Engine</span>
+                        <div class="skill-logos">
+                            <Image
+                                src="/logos/godot-original.svg"
+                                alt="Godot"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interessen -->
+    <section class="interests-section">
+        <p class="section-label">Persönliche Interessen</p>
+        <h2>Was mich bewegt</h2>
+        <div class="interests-grid">
+            <span class="interest-tag">&#127807; Pflanzenkunde</span>
+            <span class="interest-tag">&#127737; Natur & Landwirtschaft</span>
+            <span class="interest-tag">&#127928; Gitarre</span>
+            <span class="interest-tag">&#127918; Spiele Entwicklung</span>
+            <span class="interest-tag">&#128218; Neues Lernen</span>
+            <span class="interest-tag">&#9881; Basteln & Hardware</span>
+        </div>
+    </section>
+</BaseLayout>

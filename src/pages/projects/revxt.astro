@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectEntry from "../../components/ProjectEntry.astro";
+import "../../styles/projects.css";
+
+import revxtFeatureMap from "../../../public/projects/revxt/fritz-feature_map_encoding.png";
+import revxtEightPlayer from "../../../public/projects/revxt/8_player_50x50_map_played.png";
+import revxtTwoPlayer from "../../../public/projects/revxt/2_player_50x50_map_palyed.png";
+import revxtEndscreen from "../../../public/projects/revxt/endscreen_wewon.png";
+---
+
+<BaseLayout title="RevXT – Corny Gruber">
+    <div class="project-header">
+        <p class="section-label">Projekte</p>
+        <h1>RevXT</h1>
+        <p class="project-subtitle">Das RevXT-Projekt.</p>
+        <p class="project-description">
+            Detaillierte Beschreibung des RevXT-Projekts – was es ist, warum es
+            entstanden ist und was es können soll.
+        </p>
+    </div>
+
+    <ProjectEntry
+        imageLeft={true}
+        tag="Ausgangslage"
+        title="Die Idee"
+        text="Woher kommt die Idee zu RevXT? Was war der Auslöser? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={revxtFeatureMap}
+        imageAlt="RevXT – Feature Map Encoding"
+    />
+    <ProjectEntry
+        imageLeft={false}
+        tag="Konzept"
+        title="Der Aufbau"
+        text="Wie ist das Projekt strukturiert? Welche Teile gehören dazu? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={revxtEightPlayer}
+        imageAlt="RevXT – 8-Spieler Karte"
+    />
+    <ProjectEntry
+        imageLeft={true}
+        tag="Umsetzung"
+        title="Technik & Details"
+        text="Welche Technologien, Tools oder Bibliotheken wurden eingesetzt? Was war technisch besonders? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={revxtTwoPlayer}
+        imageAlt="RevXT – 2-Spieler Karte"
+    />
+    <ProjectEntry
+        imageLeft={false}
+        tag="Stand heute"
+        title="Wo das Projekt gerade steht"
+        text="Was ist bereits fertig, was ist noch in Arbeit? Was sind die nächsten Schritte? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={revxtEndscreen}
+        imageAlt="RevXT – Endscreen"
+    />
+</BaseLayout>

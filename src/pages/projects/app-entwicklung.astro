@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectEntry from "../../components/ProjectEntry.astro";
+import "../../styles/projects.css";
+
+import appScreen1 from "../../../public/projects/app/screen1.png";
+import appScreen2 from "../../../public/projects/app/screen2.png";
+import appScreen3 from "../../../public/projects/app/screen3.png";
+---
+
+<BaseLayout title="App-Entwicklung – Corny Gruber">
+    <div class="project-header">
+        <p class="section-label">Projekte</p>
+        <h1>App-Entwicklung</h1>
+        <p class="project-subtitle">Von der Idee zur laufenden Applikation.</p>
+        <p class="project-description">
+            Ich entwickle Web-Apps und Tools, die echte Probleme lösen – mit
+            sauberem Code, durchdachter Struktur und einem Fokus auf
+            Benutzerfreundlichkeit.
+        </p>
+    </div>
+
+    <ProjectEntry
+        imageLeft={true}
+        portrait={true}
+        tag="Ausgangslage"
+        title="Das Problem"
+        text="Hier beschreibst du, welches Problem oder welche Aufgabe am Anfang stand. Was war der Auslöser für das Projekt? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={appScreen1}
+        imageAlt="App – Screenshot 1"
+    />
+    <ProjectEntry
+        imageLeft={false}
+        portrait={true}
+        tag="Konzept"
+        title="Die Idee"
+        text="Wie hast du das Problem angegangen? Welche Überlegungen und Entscheidungen haben die Lösung geprägt? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={appScreen2}
+        imageAlt="App – Screenshot 2"
+    />
+    <ProjectEntry
+        imageLeft={true}
+        portrait={true}
+        tag="Umsetzung"
+        title="Die Technik dahinter"
+        text="Welche Technologien, Architektur oder Tools wurden eingesetzt? Was war besonders herausfordernd? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={appScreen3}
+        imageAlt="App – Screenshot 3"
+    />
+    <ProjectEntry
+        imageLeft={false}
+        tag="Ergebnis"
+        title="Was dabei entstanden ist"
+        text="Was ist am Ende herausgekommen? Was funktioniert, was würdest du anders machen? Platzhalter – hier kommt dein echter Inhalt hin."
+    />
+</BaseLayout>

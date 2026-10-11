@@ -1,0 +1,132 @@
+.project-header {
+    padding: 3rem 0 2.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4rem;
+}
+
+.project-header .section-label {
+    margin-bottom: 0.5rem;
+}
+
+.project-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.project-header .project-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.project-header .project-description {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 640px;
+    line-height: 1.7;
+}
+
+/* ── Alternating entry layout ── */
+.project-entry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Portrait mode: narrow image column so phone screenshots don't get cut */
+.project-entry.portrait {
+    grid-template-columns: 0.4fr 1fr;
+}
+
+.project-entry.portrait.image-right {
+    grid-template-columns: 1fr 0.4fr;
+}
+
+.project-entry:last-child {
+    border-bottom: none;
+}
+
+/* swap columns for image-right via CSS order */
+.project-entry.image-right .project-entry-image {
+    order: 1;
+}
+
+.project-entry-image {
+    overflow: hidden;
+}
+
+.project-entry-image img,
+.project-entry-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius);
+    object-fit: cover;
+    display: block;
+}
+
+/* portrait: tighter ratio crops status bar top + nav strip bottom only */
+.project-entry.portrait .project-entry-image img {
+    aspect-ratio: 9 / 18.5;
+    object-fit: cover;
+    object-position: 50% 52%;
+}
+
+.project-entry-placeholder {
+    background: linear-gradient(135deg, var(--color-sage) 0%, var(--color-forest) 100%);
+    box-shadow: 0 0 40px var(--color-mint-glow);
+}
+
+.project-entry-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.project-entry-text .section-label {
+    margin-bottom: 0.25rem;
+}
+
+.project-entry-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-entry-text p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+/* ── Mobile ── */
+@media (max-width: 720px) {
+    .project-header {
+        padding: 2rem 0 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* all entries collapse to single column regardless of portrait/landscape */
+    .project-entry,
+    .project-entry.portrait,
+    .project-entry.portrait.image-right {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 1.75rem 0;
+    }
+
+    /* image always on top on mobile */
+    .project-entry-image {
+        order: -1 !important;
+    }
+
+    /* portrait images: show full height on mobile, no crop */
+    .project-entry.portrait .project-entry-image img {
+        aspect-ratio: 9 / 18.5;
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+        border-radius: var(--radius);
+    }
+}

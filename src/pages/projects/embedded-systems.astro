@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectEntry from "../../components/ProjectEntry.astro";
+import "../../styles/projects.css";
+---
+
+<BaseLayout title="Embedded Systems – Corny Gruber">
+    <div class="project-header">
+        <p class="section-label">Projekte</p>
+        <h1>Embedded Systems</h1>
+        <p class="project-subtitle">Wo Code auf Silizium trifft.</p>
+        <p class="project-description">
+            Microcontroller, Low-Level-Programmierung und Hardware-nahe Software
+            – von der Schaltung bis zum fertigen Programm.
+        </p>
+    </div>
+
+    <ProjectEntry
+        imageLeft={true}
+        tag="Ausgangslage"
+        title="Das Problem"
+        text="Hier beschreibst du, welches Problem oder welche Aufgabe am Anfang stand. Was war der Auslöser für das Projekt? Platzhalter – hier kommt dein echter Inhalt hin."
+    />
+    <ProjectEntry
+        imageLeft={false}
+        tag="Hardware"
+        title="Die Schaltung"
+        text="Welche Hardware wurde verwendet? Wie sieht das Setup aus? Schaltplan, Komponenten, Besonderheiten. Platzhalter – hier kommt dein echter Inhalt hin."
+    />
+    <ProjectEntry
+        imageLeft={true}
+        tag="Software"
+        title="Der Code"
+        text="Wie ist die Software aufgebaut? Welche Protokolle, Register oder Interrupts spielen eine Rolle? Platzhalter – hier kommt dein echter Inhalt hin."
+    />
+    <ProjectEntry
+        imageLeft={false}
+        tag="Ergebnis"
+        title="Was dabei entstanden ist"
+        text="Was ist am Ende herausgekommen? Was funktioniert, was würdest du anders machen? Platzhalter – hier kommt dein echter Inhalt hin."
+    />
+</BaseLayout>

@@ -1,0 +1,224 @@
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 3rem 0 2rem;
+}
+
+.about-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%;
+    object-fit: cover;
+    box-shadow: 0 0 60px var(--color-mint-glow);
+    max-width: 240px;
+}
+
+.about-intro .section-label {
+    margin-bottom: 0.5rem;
+}
+
+.about-intro h1 {
+    margin-bottom: 1rem;
+}
+
+.about-intro p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    max-width: 560px;
+}
+
+/* Persönlichkeits-Section */
+.personality-section {
+    margin-top: 4rem;
+}
+
+.personality-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.traits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.trait-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    transition:
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.trait-card:hover {
+    box-shadow: 0 10px 24px rgba(28, 48, 34, 0.12);
+    transform: translateY(-2px);
+}
+
+.trait-card .trait-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.trait-card .trait-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(48%) sepia(24%) saturate(366%) hue-rotate(84deg) brightness(98%) contrast(105%);
+}
+
+.trait-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.trait-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 4rem;
+}
+
+.skills-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-group h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-sage);
+    margin-bottom: 1rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.skill-item:hover {
+    box-shadow: 0 8px 18px rgba(28, 48, 34, 0.08);
+    transform: translateY(-1px);
+}
+
+.skill-logos {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.skill-logos img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    /* invert dark logos in dark mode */
+}
+
+:root[data-theme="dark"] .skill-logos img.logo-dark {
+    filter: invert(1) brightness(1.5);
+}
+
+/* Interests */
+.interests-section {
+    margin-top: 4rem;
+}
+
+.interests-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.interest-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.45rem 1rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    transition:
+        box-shadow 180ms ease,
+        transform 180ms ease,
+        color 180ms ease;
+}
+
+.interest-tag:hover {
+    color: var(--text);
+    box-shadow: 0 8px 18px rgba(28, 48, 34, 0.08);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+        padding: 2rem 0 1.5rem;
+    }
+
+    .about-photo {
+        max-width: 140px;
+        margin: 0 auto;
+    }
+
+    .about-intro {
+        text-align: center;
+    }
+
+    .about-intro p {
+        max-width: 100%;
+    }
+
+    .personality-section,
+    .skills-section,
+    .interests-section {
+        margin-top: 2.5rem;
+    }
+
+    .skills-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .traits-grid {
+        grid-template-columns: 1fr;
+    }
+}

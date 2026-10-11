@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectEntry from "../../components/ProjectEntry.astro";
+import "../../styles/projects.css";
+
+import bitburnerTerminal from "../../../public/projects/bitburner/terminal.png";
+import bitburnerCode from "../../../public/projects/bitburner/codeblock_controler.png";
+import bitburnerHacknet from "../../../public/projects/bitburner/hecknet_node_manger.png";
+import bitburnerFirm from "../../../public/projects/bitburner/firma_manager.png";
+---
+
+<BaseLayout title="Bitburner – Corny Gruber">
+    <div class="project-header">
+        <p class="section-label">Projekte</p>
+        <h1>Bitburner</h1>
+        <p class="project-subtitle">
+            Hacking-Game trifft echtes Programmieren.
+        </p>
+        <p class="project-description">
+            Scripts, Automatisierungen und Strategien für das Hacking-Game
+            Bitburner – wo JavaScript-Kenntnisse direkt zum Spielfortschritt
+            beitragen.
+        </p>
+    </div>
+
+    <ProjectEntry
+        imageLeft={true}
+        tag="Ausgangslage"
+        title="Was ist Bitburner?"
+        text="Kurze Erklärung des Spiels und warum es sich als Programmier-Playground eignet. Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={bitburnerTerminal}
+        imageAlt="Bitburner – Terminal"
+    />
+    <ProjectEntry
+        imageLeft={false}
+        tag="Automatisierung"
+        title="Die Scripts"
+        text="Welche Teile des Spiels hast du automatisiert? Wie sind die Scripts aufgebaut? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={bitburnerCode}
+        imageAlt="Bitburner – Codeblock Controller"
+    />
+    <ProjectEntry
+        imageLeft={true}
+        tag="Strategie"
+        title="Der Ansatz"
+        text="Welche Strategie steckt dahinter? Wie optimierst du Ressourcen, Angriffe oder den Spielfortschritt? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={bitburnerHacknet}
+        imageAlt="Bitburner – Hacknet Node Manager"
+    />
+    <ProjectEntry
+        imageLeft={false}
+        tag="Learnings"
+        title="Was ich mitgenommen habe"
+        text="Was hast du durch das Projekt gelernt? Welche Übertragungen auf echte Projekte gibt es? Platzhalter – hier kommt dein echter Inhalt hin."
+        imageSrc={bitburnerFirm}
+        imageAlt="Bitburner – Firma Manager"
+    />
+</BaseLayout>

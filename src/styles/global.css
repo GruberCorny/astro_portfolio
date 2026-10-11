@@ -1,0 +1,302 @@
+/* ── Organic Tech Design System ── */
+:root {
+    /* Brand Colors */
+    --color-forest: oklch(28.726% 0.03653 153.166);
+    --color-sage: oklch(58.681% 0.08452 146.433);
+    --color-mint: oklch(73.608% 0.14937 152.425); /*TODO: from main color */
+    --color-mint-glow: oklch(73.608% 0.14937 152.425 / 0.22);
+
+    /* Surface */
+    --bg: oklch(97.602% 0.005 146.571);
+    --bg-card: oklch(100% 0 0);
+    --bg-subtle: oklch(95.823% 0.00912 151.28);
+
+    /* Text */
+    --text: oklch(28.726% 0.03653 153.166);
+    --text-muted: oklch(35.294% 0.045 152.425);
+
+    /* UI */
+    --border: oklch(88.976% 0.02718 148.979);
+    --shadow: 0 4px 24px oklch(28.726% 0.03653 153.166 / 0.08);
+    --radius: 14px;
+    --radius-sm: 8px;
+
+    /* Layout */
+    --content-width: 69rem;
+
+    /* Transitions */
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --dur: 300ms;
+
+    /* Typography Ratios */
+    --major-third: 1.25;
+    --perfect-fourth: 1.33;
+    --perfect-fifth: 1.50;
+    --golden-ratio: 1.618;
+    --ratio: var(--perfect-fourth);
+
+
+}
+
+:root[data-theme="dark"] {
+    --bg: oklch(20.417% 0.02249 152.636);
+    --bg-card: oklch(23.429% 0.02187 153.013);
+    --bg-subtle: oklch(27.895% 0.03796 151.29);
+    --text: oklch(93.181% 0.0289 145.509);
+    --text-muted: oklch(69.219% 0.07978 147.945);
+    --border: oklch(34.776% 0.03932 152.569);
+    --shadow: 0 4px 24px oklch(0% 0 0 / 0.45);
+}
+
+
+p,.p,
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6,
+small,.small {
+    font-size: calc(1rem * pow(var(--ratio), var(--step, 0)));
+}
+
+small,.small {
+    --step: -1;
+}
+
+p,.p {
+    --step: 0;
+}
+
+h1,.h1 {
+    --step: 6;
+    line-height: 1.0;
+    font-weight: 600;
+}
+
+h2,.h2 {
+    --step: 5;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+h3,.h3 {
+    --step: 4;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+h4,.h4 {
+    --step: 3;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+h5,.h5 {
+    --step: 2;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+h6,.h6 {
+    --step: 1;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: var(--color-mint);
+    text-decoration: none;
+    transition: opacity var(--dur) var(--ease);
+}
+
+a:hover {
+    opacity: 0.75;
+}
+
+main {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* Remove 300ms tap delay on mobile */
+a,
+button {
+    touch-action: manipulation;
+}
+
+/* Better tap targets on mobile */
+@media (max-width: 680px) {
+    main {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.75rem;
+    cursor: default;
+    transition:
+        box-shadow var(--dur) var(--ease),
+        transform 180ms ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 24px rgba(28, 48, 34, 0.12);
+    transform: translateY(-2px);
+}
+
+.badge {
+    display: inline-block;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.2rem 0.75rem;
+    color: var(--text-muted);
+}
+
+.section-label {
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-sage);
+    margin-bottom: 0.5rem;
+}
+
+.eyebrow {
+    --step: 0.5;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-mint);
+}
+
+
+
+
+
+/*#region: Footer  TODO: anoter file*/
+.site-footer {
+    margin-top: 4rem;
+    background: linear-gradient(180deg, rgba(28, 48, 34, 0.97), rgba(19, 32, 24, 1));
+    color: #edf7ef;
+    border-top: 1px solid rgba(139, 197, 157, 0.2);
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 1.2rem;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer-brand h3,
+.footer-column h4 {
+    color: #f4fbf5;
+    margin-bottom: 0.6rem;
+}
+
+.footer-brand p,
+.footer-column li,
+.footer-bottom {
+    color: rgba(237, 247, 239, 0.8);
+}
+
+.footer-column ul {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.footer-column a,
+.footer-back-to-top a {
+    color: #dcf9e5;
+}
+
+.footer-column a:hover,
+.footer-back-to-top a:hover {
+    opacity: 1;
+    color: var(--color-mint);
+}
+
+.footer-back-to-top {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.9rem;
+}
+
+.footer-back-to-top a {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(139, 197, 157, 0.35);
+    background: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 0 1.5rem 2rem;
+}
+/*#endregion*/
+
+
+@media (max-width: 760px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    :root{
+            --ratio: var(--major-third);
+    }
+}
