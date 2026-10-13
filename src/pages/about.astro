@@ -3,11 +3,38 @@ import { Image, Picture } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/about.css";
 
-import profileImage from "../../public/profile.jpg";
-import sproutIcon from "../../public/icons/sprout.svg";
-import brainIcon from "../../public/icons/brain-circuit.svg";
-import stoneIcon from "../../public/icons/stone.svg";
-import shieldIcon from "../../public/icons/shield-check.svg";
+import profileImage from "../../assets/profile.jpg";
+import sproutIcon from "../../assets/icons/sprout.svg";
+import brainIcon from "../../assets/icons/brain-circuit.svg";
+import stoneIcon from "../../assets/icons/stone.svg";
+import shieldIcon from "../../assets/icons/shield-check.svg";
+import htmlIcon from "../../assets/logos/html-5-no-wordmark-svgrepo-com.svg";
+import cssIcon from "../../assets/logos/css-3-svgrepo-com.svg";
+import jsIcon from "../../assets/logos/js-svgrepo-com.svg";
+import tsIcon from "../../assets/logos/typescript-icon-svgrepo-com.svg";
+import astroIcon from "../../assets/logos/astro-original.svg";
+import cIcon from "../../assets/logos/c-svgrepo-com.svg";
+import javaIcon from "../../assets/logos/java-svgrepo-com.svg";
+import kotlinIcon from "../../assets/logos/Kotlin_icon_(2021-present).svg";
+import pythonIcon from "../../assets/logos/python-svgrepo-com.svg";
+import sqlIcon from "../../assets/logos/sql-database-generic-svgrepo-com.svg";
+import asmIcon from "../../assets/logos/asm-icon.svg";
+import arduinoIcon from "../../assets/logos/arduino-svgrepo-com.svg";
+import fritzingIcon from "../../assets/logos/fritzing.svg";
+import atmelIcon from "../../assets/logos/AtmelStudio-Logos/AtmelStudio-Bug-White-With-BG.svg";
+import githubIcon from "../../assets/logos/github-icon-svgrepo-com.svg";
+import gitIcon from "../../assets/logos/git-icon-svgrepo-com.svg";
+import vscodeIcon from "../../assets/logos/vs-code-svgrepo-com.svg";
+import linuxIcon from "../../assets/logos/linux-svgrepo-com.svg";
+import bashIcon from "../../assets/logos/bash-icon-svgrepo-com.svg";
+import dockerIcon from "../../assets/logos/docker-svgrepo-com.svg";
+import figmaIcon from "../../assets/logos/figma-svgrepo-com.svg";
+import godotIcon from "../../assets/logos/godot-original.svg";
+import leafIcon from "../../assets/logos/leaf.svg";
+import guitarIcon from "../../assets/logos/guitar.svg";
+import gamepadIcon from "../../assets/logos/gamepad-2.svg";
+import bookTextIcon from "../../assets/logos/book-text.svg";
+import settingsIcon from "../../assets/logos/settings.svg";
 ---
 
 <BaseLayout title="About Me – Corny Gruber">
@@ -131,7 +158,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <div class="skill-logos">
                             <Image
                                 loading="eager"
-                                src="/logos/html-5-no-wordmark-svgrepo-com.svg"
+                                src={htmlIcon}
                                 alt="HTML5"
                                 width={22}
                                 height={22}
@@ -144,7 +171,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <div class="skill-logos">
                             <Image
                                 loading="eager"
-                                src="/logos/css-3-svgrepo-com.svg"
+                                src={cssIcon}
                                 alt="CSS3"
                                 width={22}
                                 height={22}
@@ -157,7 +184,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <div class="skill-logos">
                             <Image
                                 loading="eager"
-                                src="/logos/js-svgrepo-com.svg"
+                                src={jsIcon}
                                 alt="JavaScript"
                                 width={22}
                                 height={22}
@@ -169,7 +196,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>TypeScript</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/typescript-icon-svgrepo-com.svg"
+                                src={tsIcon}
                                 alt="TypeScript"
                                 width={22}
                                 height={22}
@@ -181,7 +208,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>Astro</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/astro-original.svg"
+                                src={astroIcon}
                                 alt="Astro"
                                 width={22}
                                 height={22}
@@ -201,7 +228,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <div class="skill-logos">
                             <Image
                                 loading="eager"
-                                src="/logos/c-svgrepo-com.svg"
+                                src={cIcon}
                                 alt="C"
                                 width={22}
                                 height={22}
@@ -214,7 +241,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <div class="skill-logos">
                             <Image
                                 loading="eager"
-                                src="/logos/java-svgrepo-com.svg"
+                                src={javaIcon}
                                 alt="Java"
                                 width={22}
                                 height={22}
@@ -227,7 +254,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <div class="skill-logos">
                             <Image
                                 loading="eager"
-                                src="/logos/Kotlin_icon_(2021-present).svg"
+                                src={kotlinIcon}
                                 alt="Kotlin"
                                 width={22}
                                 height={22}
@@ -239,7 +266,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>Python</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/python-svgrepo-com.svg"
+                                src={pythonIcon}
                                 alt="Python"
                                 width={22}
                                 height={22}
@@ -251,7 +278,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>SQL</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/sql-database-generic-svgrepo-com.svg"
+                                src={sqlIcon}
                                 alt="SQL"
                                 width={22}
                                 height={22}
@@ -267,19 +294,21 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                 <ul class="skill-list">
                     <li class="skill-item">
                         <span>Assembly x86</span>
-                        <Image
-                            src="/logos/ASM-logo.svg"
-                            alt="Assembly x86"
-                            width={22}
-                            height={22}
-                            quality={100}
-                        />
+                        <div class="skill-logos">
+                            <Image
+                                src={asmIcon}
+                                alt="Assembly x86"
+                                width={22}
+                                height={22}
+                                quality={100}
+                            />
+                        </div>
                     </li>
                     <li class="skill-item">
                         <span>Arduino</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/arduino-svgrepo-com.svg"
+                                src={arduinoIcon}
                                 alt="Arduino"
                                 width={22}
                                 height={22}
@@ -291,7 +320,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>Fritzing</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/fritzing.svg"
+                                src={fritzingIcon}
                                 alt="Fritzing"
                                 width={22}
                                 height={22}
@@ -304,7 +333,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>Atmel / Microchip Studio</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/AtmelStudio-Bug-White-With-BG.svg"
+                                src={atmelIcon}
                                 alt="Atmel"
                                 width={22}
                                 height={22}
@@ -323,7 +352,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>Git</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/git-icon-svgrepo-com.svg"
+                                src={gitIcon}
                                 alt="Git"
                                 width={22}
                                 height={22}
@@ -335,7 +364,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>VS Code</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/vs-code-svgrepo-com.svg"
+                                src={vscodeIcon}
                                 alt="VS Code"
                                 width={22}
                                 height={22}
@@ -347,7 +376,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>Bash</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/bash-icon-svgrepo-com.svg"
+                                src={bashIcon}
                                 alt="Bash"
                                 width={22}
                                 height={22}
@@ -359,7 +388,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>Docker</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/docker-svgrepo-com.svg"
+                                src={dockerIcon}
                                 alt="Docker"
                                 width={22}
                                 height={22}
@@ -371,7 +400,7 @@ import shieldIcon from "../../public/icons/shield-check.svg";
                         <span>Godot Engine</span>
                         <div class="skill-logos">
                             <Image
-                                src="/logos/godot-original.svg"
+                                src={godotIcon}
                                 alt="Godot"
                                 width={22}
                                 height={22}
@@ -389,12 +418,66 @@ import shieldIcon from "../../public/icons/shield-check.svg";
         <p class="section-label">Persönliche Interessen</p>
         <h2>Was mich bewegt</h2>
         <div class="interests-grid">
-            <span class="interest-tag">&#127807; Pflanzenkunde</span>
-            <span class="interest-tag">&#127737; Natur & Landwirtschaft</span>
-            <span class="interest-tag">&#127928; Gitarre</span>
-            <span class="interest-tag">&#127918; Spiele Entwicklung</span>
-            <span class="interest-tag">&#128218; Neues Lernen</span>
-            <span class="interest-tag">&#9881; Basteln & Hardware</span>
+            <span class="interest-tag">
+                <div class="hobby-logos">
+                    <Image
+                        src={leafIcon}
+                        alt="Natur"
+                        width={22}
+                        height={22}
+                        quality={100}
+                    />
+                </div>
+                <p>Natur & Landwirtschaft</p>
+            </span>
+            <span class="interest-tag">
+                <div class="hobby-logos">
+                    <Image
+                        src={guitarIcon}
+                        alt="Gitarre"
+                        width={22}
+                        height={22}
+                        quality={100}
+                    />
+                </div>
+                <p>Gitarre</p>
+            </span>
+            <span class="interest-tag">
+                <div class="hobby-logos">
+                    <Image
+                        src={gamepadIcon}
+                        alt="Spiele"
+                        width={22}
+                        height={22}
+                        quality={100}
+                    />
+                </div>
+                <p>Videospiele</p>
+            </span>
+            <span class="interest-tag">
+                <div class="hobby-logos">
+                    <Image
+                        src={bookTextIcon}
+                        alt="Neues Lernen"
+                        width={22}
+                        height={22}
+                        quality={100}
+                    />
+                </div>
+                <p>Lesen</p>
+            </span>
+            <span class="interest-tag">
+                <div class="hobby-logos">
+                    <Image
+                        src={settingsIcon}
+                        alt="Basteln"
+                        width={22}
+                        height={22}
+                        quality={100}
+                    />
+                </div>
+                <p>Basteln & Hardware</p>
+            </span>
         </div>
     </section>
 </BaseLayout>
