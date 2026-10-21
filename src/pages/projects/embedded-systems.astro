@@ -1,42 +1,121 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectEntry from "../../components/ProjectEntry.astro";
 import "../../styles/projects.css";
+
+import cIcon from "../../../assets/logos/c-svgrepo-com.svg";
+import asmIcon from "../../../assets/logos/asm-icon.svg";
+import arduinoIcon from "../../../assets/logos/arduino-svgrepo-com.svg";
+import fritzingIcon from "../../../assets/logos/fritzing.svg";
+import atmelIcon from "../../../assets/logos/AtmelStudio-Logos/AtmelStudio-Bug-White-With-BG.svg";
+import vscodeIcon from "../../../assets/logos/vs-code-svgrepo-com.svg";
 ---
 
 <BaseLayout title="Embedded Systems – Corny Gruber">
     <div class="project-header">
-        <p class="section-label">Projekte</p>
         <h1>Embedded Systems</h1>
-        <p class="project-subtitle">Wo Code auf Silizium trifft.</p>
+        <div class="project-tools" aria-label="Verwendete Werkzeuge">
+            <span class="tool-badge"
+                ><Image src={cIcon} alt="C" width={24} height={24} /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={asmIcon}
+                    alt="Assembly"
+                    width={24}
+                    height={24}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={arduinoIcon}
+                    alt="Arduino"
+                    width={24}
+                    height={24}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={fritzingIcon}
+                    alt="Fritzing"
+                    width={24}
+                    height={24}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={atmelIcon}
+                    alt="Atmel Studio"
+                    width={24}
+                    height={24}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={vscodeIcon}
+                    alt="VS Code"
+                    width={24}
+                    height={24}
+                /></span
+            >
+        </div>
         <p class="project-description">
-            Microcontroller, Low-Level-Programmierung und Hardware-nahe Software
-            – von der Schaltung bis zum fertigen Programm.
+            Microcontroller, Low-Level-Programmierung und Hardware-nahe Software.
         </p>
     </div>
 
-    <ProjectEntry
-        imageLeft={true}
-        tag="Ausgangslage"
-        title="Das Problem"
-        text="Hier beschreibst du, welches Problem oder welche Aufgabe am Anfang stand. Was war der Auslöser für das Projekt? Platzhalter – hier kommt dein echter Inhalt hin."
-    />
-    <ProjectEntry
-        imageLeft={false}
-        tag="Hardware"
-        title="Die Schaltung"
-        text="Welche Hardware wurde verwendet? Wie sieht das Setup aus? Schaltplan, Komponenten, Besonderheiten. Platzhalter – hier kommt dein echter Inhalt hin."
-    />
-    <ProjectEntry
-        imageLeft={true}
-        tag="Software"
-        title="Der Code"
-        text="Wie ist die Software aufgebaut? Welche Protokolle, Register oder Interrupts spielen eine Rolle? Platzhalter – hier kommt dein echter Inhalt hin."
-    />
-    <ProjectEntry
-        imageLeft={false}
-        tag="Ergebnis"
-        title="Was dabei entstanden ist"
-        text="Was ist am Ende herausgekommen? Was funktioniert, was würdest du anders machen? Platzhalter – hier kommt dein echter Inhalt hin."
-    />
+    <section class="project-entry project-entry--image-left">
+        <div class="project-entry-media">
+            <div class="project-entry-placeholder" aria-hidden="true"></div>
+        </div>
+        <div class="project-entry-content">
+            <h4>Das Problem</h4>
+            <p>
+                Hier beschreibst du, welches Problem oder welche Aufgabe am
+                Anfang stand. Was war der Auslöser für das Projekt? Platzhalter
+                – hier kommt dein echter Inhalt hin.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-right">
+        <div class="project-entry-media">
+            <div class="project-entry-placeholder" aria-hidden="true"></div>
+        </div>
+        <div class="project-entry-content">
+            <h4>Die Schaltung</h4>
+            <p>
+                Welche Hardware wurde verwendet? Wie sieht das Setup aus?
+                Schaltplan, Komponenten, Besonderheiten. Platzhalter – hier
+                kommt dein echter Inhalt hin.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-left">
+        <div class="project-entry-media">
+            <div class="project-entry-placeholder" aria-hidden="true"></div>
+        </div>
+        <div class="project-entry-content">
+            <h4>Der Code</h4>
+            <p>
+                Wie ist die Software aufgebaut? Welche Protokolle, Register oder
+                Interrupts spielen eine Rolle? Platzhalter – hier kommt dein
+                echter Inhalt hin.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-right">
+        <div class="project-entry-media">
+            <div class="project-entry-placeholder" aria-hidden="true"></div>
+        </div>
+        <div class="project-entry-content">
+            <h4>Was dabei entstanden ist</h4>
+            <p>
+                Was ist am Ende herausgekommen? Was funktioniert, was würdest du
+                anders machen? Platzhalter – hier kommt dein echter Inhalt hin.
+            </p>
+        </div>
+    </section>
 </BaseLayout>

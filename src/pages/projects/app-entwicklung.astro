@@ -1,56 +1,118 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectEntry from "../../components/ProjectEntry.astro";
 import "../../styles/projects.css";
 
-import appScreen1 from "../../../assets/projects/app/screen1.png";
-import appScreen2 from "../../../assets/projects/app/screen2.png";
-import appScreen3 from "../../../assets/projects/app/screen3.png";
+import kotlinIcon from "../../../assets/logos/Kotlin_icon_(2021-present).svg";
+import androidStudioIcon from "../../../assets/logos/android-studio-icon.svg";
+
+import appScreen1 from "../../../assets/App/notes_App.png";
+import appScreen2 from "../../../assets/App/gedaechtnis_App.png";
+import appScreen3 from "../../../assets/App/dobble_App.png";
 ---
 
-<BaseLayout title="App-Entwicklung – Corny Gruber">
+<BaseLayout title="App-Entwicklung Cornelius Gruber">
     <div class="project-header">
-        <p class="section-label">Projekte</p>
         <h1>App-Entwicklung</h1>
-        <p class="project-subtitle">Von der Idee zur laufenden Applikation.</p>
+        <div class="project-tools" aria-label="Verwendete Werkzeuge">
+            <span class="tool-badge"
+                ><Image
+                    loading="eager"
+                    src={kotlinIcon}
+                    alt="Kotlin"
+                    width={22}
+                    height={22}
+                    quality={100}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    loading="eager"
+                    src={androidStudioIcon}
+                    alt="Android Studio"
+                    width={22}
+                    height={22}
+                    quality={100}
+                /></span
+            >
+        </div>
         <p class="project-description">
-            Ich entwickle Web-Apps und Tools, die echte Probleme lösen – mit
-            sauberem Code, durchdachter Struktur und einem Fokus auf
-            Benutzerfreundlichkeit.
+            Ich entwickle Web-Apps und Tools, nach Ideen aus bestehenden Spielen
+            oder nach Anregungen aus meinem Umfeld.
         </p>
     </div>
 
-    <ProjectEntry
-        imageLeft={true}
-        portrait={true}
-        tag="Ausgangslage"
-        title="Das Problem"
-        text="Hier beschreibst du, welches Problem oder welche Aufgabe am Anfang stand. Was war der Auslöser für das Projekt? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={appScreen1}
-        imageAlt="App – Screenshot 1"
-    />
-    <ProjectEntry
-        imageLeft={false}
-        portrait={true}
-        tag="Konzept"
-        title="Die Idee"
-        text="Wie hast du das Problem angegangen? Welche Überlegungen und Entscheidungen haben die Lösung geprägt? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={appScreen2}
-        imageAlt="App – Screenshot 2"
-    />
-    <ProjectEntry
-        imageLeft={true}
-        portrait={true}
-        tag="Umsetzung"
-        title="Die Technik dahinter"
-        text="Welche Technologien, Architektur oder Tools wurden eingesetzt? Was war besonders herausfordernd? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={appScreen3}
-        imageAlt="App – Screenshot 3"
-    />
-    <ProjectEntry
-        imageLeft={false}
-        tag="Ergebnis"
-        title="Was dabei entstanden ist"
-        text="Was ist am Ende herausgekommen? Was funktioniert, was würdest du anders machen? Platzhalter – hier kommt dein echter Inhalt hin."
-    />
+    <section
+        class="project-entry project-entry--portrait project-entry--image-left"
+    >
+        <div class="project-entry-media">
+            <Image
+                src={appScreen1}
+                alt="notes App Screenshot"
+                width={1224}
+                height={2720}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 420px"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Notes App</h4>
+            <p>
+                Zum Einstieg in die App-Entwicklung habe ich zuerst eine
+                einfache Notes App entwickelt, um mich mit der Umgebung bekannt
+                zu machen. Diese hat die Funktionen des Hinzufügens und Löschens
+                von Notizen.
+            </p>
+        </div>
+    </section>
+
+    <section
+        class="project-entry project-entry--portrait project-entry--image-right"
+    >
+        <div class="project-entry-media">
+            <Image
+                src={appScreen2}
+                alt="gedaechtnis App Screenshot"
+                width={1224}
+                height={2720}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 420px"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Gedächtnis Trainer</h4>
+            <p>
+                Nach Inspiration durch das Spiel 'ich packe meinen Koffer' habe
+                ich eine App entwickelt, die das Gedächtnis trainiert. Hierbei
+                soll man immer anklicken ob man das Symbol bereits gesehen hat
+                oder ob man es noch nicht gesehen hat, und dementsprechend
+                Punkte oder Fehler sammeln.
+            </p>
+        </div>
+    </section>
+
+    <section
+        class="project-entry project-entry--portrait project-entry--image-left"
+    >
+        <div class="project-entry-media">
+            <Image
+                src={appScreen3}
+                alt="dobble App Screenshot"
+                width={1224}
+                height={2720}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 420px"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Dobble App</h4>
+            <p>
+                Inspiriert durch das Spiel 'Dobble' habe ich eine App
+                entwickelt, bei der die Spieler gleiche Symbole finden und
+                antippen müssen. Wenn erfolgreich angetippt, erhält man einen
+                Punkt, die untere Sybolscheibe wird zur Oberen und die untere
+                wird neu befüllt so das genau 1 symbol übereinstimmt.
+            </p>
+        </div>
+    </section>
 </BaseLayout>

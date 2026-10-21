@@ -1,55 +1,153 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectEntry from "../../components/ProjectEntry.astro";
 import "../../styles/projects.css";
 
-import revxtFeatureMap from "../../../assets/projects/revxt/fritz-feature_map_encoding.png";
-import revxtEightPlayer from "../../../assets/projects/revxt/8_player_50x50_map_played.png";
-import revxtTwoPlayer from "../../../assets/projects/revxt/2_player_50x50_map_palyed.png";
-import revxtEndscreen from "../../../assets/projects/revxt/endscreen_wewon.png";
+import revxtgamepic from "../../../assets/RevXT/game_pic.jpeg";
+import revxtbitMap from "../../../assets/RevXT/fritz-feature_map_encoding.png";
+import revxtminmaxtree from "../../../assets/RevXT/fritz_minmax.png";
+import revxtEightPlayer from "../../../assets/RevXT/8_player_50x50_map_played.png";
+
+import javaIcon from "../../../assets/logos/java-svgrepo-com.svg";
+import gitIcon from "../../../assets/logos/git-icon-svgrepo-com.svg";
+import vscodeIcon from "../../../assets/logos/vs-code-svgrepo-com.svg";
+import bashIcon from "../../../assets/logos/bash-icon-svgrepo-com.svg";
 ---
 
 <BaseLayout title="RevXT – Corny Gruber">
     <div class="project-header">
-        <p class="section-label">Projekte</p>
         <h1>RevXT</h1>
-        <p class="project-subtitle">Das RevXT-Projekt.</p>
+        <div class="project-tools" aria-label="Verwendete Werkzeuge">
+            <span class="tool-badge"
+                ><Image
+                    src={javaIcon}
+                    alt="Java"
+                    width={24}
+                    height={24}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={bashIcon}
+                    alt="Bash"
+                    width={24}
+                    height={24}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image src={gitIcon} alt="Git" width={24} height={24} /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={vscodeIcon}
+                    alt="VS Code"
+                    width={24}
+                    height={24}
+                /></span
+            >
+        </div>
         <p class="project-description">
-            Detaillierte Beschreibung des RevXT-Projekts – was es ist, warum es
-            entstanden ist und was es können soll.
+            RevXT ist ein Team Projekt welches ich mit meinen Kommilitonen
+            entwickelt habe. Das Spiel basiert auf dem Brettspiel
+            Reversi/Othello und hat weil dieses bereits vollständig gelöst wird
+            einige Erweiterungen und Modifikationen erhalten, um das
+            Spielerlebnis interessanter und herausfordernder zu gestalten. So
+            ist ReversiXT nicht nur auf einem 50x50 anstelle eine 8x8
+            Spielfeldes sondern hat auch bonben und Bonussteine enthalten um das
+            Bewertungssystem der einzelnen Züge zu erweitern und das Spiel
+            strategisch anspruchsvoller zu gestalten. Anschließend haben alle
+            Teams, welche je eine eigene Ki für das Spiel entwickelt haben, ihre
+            Ki gegeneinander antreten lassen, um zu vergleichen und die besten
+            Strategien zu ermitteln.
         </p>
     </div>
 
-    <ProjectEntry
-        imageLeft={true}
-        tag="Ausgangslage"
-        title="Die Idee"
-        text="Woher kommt die Idee zu RevXT? Was war der Auslöser? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={revxtFeatureMap}
-        imageAlt="RevXT – Feature Map Encoding"
-    />
-    <ProjectEntry
-        imageLeft={false}
-        tag="Konzept"
-        title="Der Aufbau"
-        text="Wie ist das Projekt strukturiert? Welche Teile gehören dazu? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={revxtEightPlayer}
-        imageAlt="RevXT – 8-Spieler Karte"
-    />
-    <ProjectEntry
-        imageLeft={true}
-        tag="Umsetzung"
-        title="Technik & Details"
-        text="Welche Technologien, Tools oder Bibliotheken wurden eingesetzt? Was war technisch besonders? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={revxtTwoPlayer}
-        imageAlt="RevXT – 2-Spieler Karte"
-    />
-    <ProjectEntry
-        imageLeft={false}
-        tag="Stand heute"
-        title="Wo das Projekt gerade steht"
-        text="Was ist bereits fertig, was ist noch in Arbeit? Was sind die nächsten Schritte? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={revxtEndscreen}
-        imageAlt="RevXT – Endscreen"
-    />
+    <section class="project-entry project-entry--image-left">
+        <div class="project-entry-media">
+            <Image
+                src={revxtgamepic}
+                alt="Reversi brettspiel"
+                width={1600}
+                height={1000}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 50vw"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Die Idee</h4>
+            <p>
+                Hierbei haben wir zuerste die grundlegende Spielmechanik von
+                Reversi analysiert und überlegt, wie wir diese umsetzen dabei
+                haben wir uns auf eine möglichst Daten sparsame Implementierung
+                geeinigt und dementsprechend unser Datenmodell als Bit-Map
+                aufgebaut.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-right">
+        <div class="project-entry-media">
+            <Image
+                src={revxtbitMap}
+                alt="RevXT – Bit-Map Darstellung"
+                width={1600}
+                height={1000}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 50vw"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Der Aufbau</h4>
+            <p>
+                Da wir uns für eine Bitmap Datenstruktur entschieden haben haben
+                wir für jeder Stein eine eigene Bit-Map angelegt. Diese bitmaps
+                konnten wir dann durch Bit-Operationen kombiniert, wodurch wir
+                unsere möglichen Spielzüge effizienter berechnet haben.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-left">
+        <div class="project-entry-media">
+            <Image
+                src={revxtminmaxtree}
+                alt="RevXT – Minimax Tree"
+                width={1600}
+                height={1000}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 50vw"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Bewertung</h4>
+            <p>
+                Hierbei wurden zunächst alle möglichen Züge berechnet und diese
+                grundlegend Bewertet. Und anschließend mithilfe des
+                Minimax-Algorithmus alle möglichen Züge von gegnerischen
+                Spielern und unseren in einem Baum aufgebaut um die optimale
+                Route zu finden
+            </p>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-right">
+        <div class="project-entry-media project-entry-media--tall">
+            <Image
+                src={revxtEightPlayer}
+                alt="RevXT – 8-Spieler Karte"
+                width={1720}
+                height={1854}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 50vw"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Was ich mitgenommen habe</h4>
+            <p>
+                In diesem Projekt habe ich viel darüber gelernt, wie wichtig
+                sauberer Code, gute Dokumentation und sorgfältiges Planen in
+                langfristigen Projekten und als Team sind.
+            </p>
+        </div>
+    </section>
 </BaseLayout>

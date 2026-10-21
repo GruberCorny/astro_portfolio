@@ -2,7 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import "../styles/global.css";
-import faviconSvg from "../../assets/favicon.svg";
+import faviconImage from "../../assets/profile-favicon-square.jpg";
 
 interface Props {
     title: string;
@@ -14,7 +14,7 @@ const { title } = Astro.props;
 <html lang="de">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
+        <link rel="icon" type="image/jpeg" href={faviconImage.src} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>

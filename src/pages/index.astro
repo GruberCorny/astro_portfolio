@@ -3,9 +3,9 @@ import { Picture, type ImageMetadata } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/home.css";
 
-import appPreview from "../../assets/projects/app/screen1.png";
-import bitburnerPreview from "../../assets/projects/bitburner/terminal.png";
-import revxtPreview from "../../assets/projects/revxt/fritz-feature_map_encoding.png";
+import appPreview from "../../assets/App/dobble_App.png";
+import bitburnerPreview from "../../assets/bitburner/center_code.png";
+import revxtPreview from "../../assets/RevXT/fritz-feature_map_encoding.png";
 import profileImage from "../../assets/profile.jpg";
 
 const projects: Array<{
@@ -46,16 +46,19 @@ const projects: Array<{
 ];
 ---
 
-<BaseLayout title="Corny Gruber – Portfolio">
+<BaseLayout title="Corny Gruber Portfolio">
 	<section class="hero">
 		<div class="hero-content">
 			<hgroup>
 				<p class="h5">Hallo, ich bin</p>
-				<h1 class="hero-title">Gruber Cornelius</h1>
+				<h1 class="hero-title">Cornelius Gruber</h1>
 			</hgroup>
 			<p class="hero-subtitle">
-				Ich entwickle Web-Apps, Embedded-Systeme und alles dazwischen –
-				bodenständig, präzise und mit echtem Interesse an der Sache.
+				Ich entwickle gerne an Hardwarenahen Projekten wie <b
+					>Embedded-Systemen</b
+				> aber habe auch gerne Visuelles Feedback von <b
+					>Webanwendungen und Apps</b
+				>.
 			</p>
 			<div class="hero-cta">
 				<a href="/about" class="btn-primary">Mehr über mich</a>
@@ -79,10 +82,10 @@ const projects: Array<{
 			/>
 		</div>
 		<div class="skills-strip">
-			<span class="badge">Web Dev</span>
 			<span class="badge">Embedded Systems</span>
+			<span class="badge">C / Java</span>
+			<span class="badge">Kotlin</span>
 			<span class="badge">Assembly x86</span>
-			<span class="badge">SQL</span>
 			<span class="badge">Godot</span>
 		</div>
 	</section>
@@ -155,32 +158,23 @@ const projects: Array<{
 	<section class="core-section">
 		<hgroup>
 			<p class="eyebrow">Was ich mache</p>
-			<h2>Drei Welten, eine Denkweise.</h2>
+			<h2>Kreative Lösungen</h2>
 		</hgroup>
 		<div class="cards-grid">
 			<div class="card">
-				<div class="card-icon">&#128421;</div>
-				<h3>Web & App-Entwicklung</h3>
+				<h4>Embedded</h4>
+				<p>Hardwarenahe Software direkt sehen und verstehen.</p>
+			</div>
+			<div class="card">
+				<h4>Games</h4>
 				<p>
-					Von der Idee zur laufenden Applikation – Frontend, Backend
-					und alles, was dazwischen liegt.
+					Godot-Projekte und Automation-Scripts, kreative Problemlösen
+					mit Spaßaktor.
 				</p>
 			</div>
 			<div class="card">
-				<div class="card-icon">&#128268;</div>
-				<h3>Embedded Systems</h3>
-				<p>
-					Microcontroller, Low-Level-Programmierung und Hardware-nahe
-					Software – wo Code auf Silizium trifft.
-				</p>
-			</div>
-			<div class="card">
-				<div class="card-icon">&#127918;</div>
-				<h3>Game & Scripting</h3>
-				<p>
-					Godot-Projekte und Automation-Scripts – kreatives
-					Problemlösen mit Spaßaktor.
-				</p>
+				<h4>Anwendungen</h4>
+				<p>Von der Idee zur laufenden Applikation.</p>
 			</div>
 		</div>
 	</section>

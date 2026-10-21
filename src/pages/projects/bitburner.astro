@@ -1,58 +1,158 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectEntry from "../../components/ProjectEntry.astro";
 import "../../styles/projects.css";
 
-import bitburnerTerminal from "../../../assets/projects/bitburner/terminal.png";
-import bitburnerCode from "../../../assets/projects/bitburner/codeblock_controler.png";
-import bitburnerHacknet from "../../../assets/projects/bitburner/hecknet_node_manger.png";
-import bitburnerFirm from "../../../assets/projects/bitburner/firma_manager.png";
+import bitburnerTerminal from "../../../assets/bitburner/bash_bitburner.png";
+import bitburnerCode from "../../../assets/bitburner/center_code.png";
+import bitburnerHacknet from "../../../assets/bitburner/init_code.png";
+import bitburnerFirm from "../../../assets/bitburner/server_scripts_running.png";
+
+import jsIcon from "../../../assets/logos/js-svgrepo-com.svg";
+import vscodeIcon from "../../../assets/logos/vs-code-svgrepo-com.svg";
+import bashIcon from "../../../assets/logos/bash-icon-svgrepo-com.svg";
 ---
 
 <BaseLayout title="Bitburner – Corny Gruber">
     <div class="project-header">
-        <p class="section-label">Projekte</p>
         <h1>Bitburner</h1>
-        <p class="project-subtitle">
-            Hacking-Game trifft echtes Programmieren.
-        </p>
+        <div class="project-tools" aria-label="Verwendete Werkzeuge">
+            <span class="tool-badge"
+                ><Image
+                    src={jsIcon}
+                    alt="JavaScript"
+                    width={24}
+                    height={24}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={bashIcon}
+                    alt="Bash"
+                    width={24}
+                    height={24}
+                /></span
+            >
+            <span class="tool-badge"
+                ><Image
+                    src={vscodeIcon}
+                    alt="VS Code"
+                    width={24}
+                    height={24}
+                /></span
+            >
+        </div>
         <p class="project-description">
-            Scripts, Automatisierungen und Strategien für das Hacking-Game
-            Bitburner – wo JavaScript-Kenntnisse direkt zum Spielfortschritt
-            beitragen.
+            Scripts, Automatisierungen und Strategien für das Programming Game
+            Bitburner in welchem man durch JavaScript das Spielgeschehen
+            steuert.
         </p>
     </div>
 
-    <ProjectEntry
-        imageLeft={true}
-        tag="Ausgangslage"
-        title="Was ist Bitburner?"
-        text="Kurze Erklärung des Spiels und warum es sich als Programmier-Playground eignet. Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={bitburnerTerminal}
-        imageAlt="Bitburner – Terminal"
-    />
-    <ProjectEntry
-        imageLeft={false}
-        tag="Automatisierung"
-        title="Die Scripts"
-        text="Welche Teile des Spiels hast du automatisiert? Wie sind die Scripts aufgebaut? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={bitburnerCode}
-        imageAlt="Bitburner – Codeblock Controller"
-    />
-    <ProjectEntry
-        imageLeft={true}
-        tag="Strategie"
-        title="Der Ansatz"
-        text="Welche Strategie steckt dahinter? Wie optimierst du Ressourcen, Angriffe oder den Spielfortschritt? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={bitburnerHacknet}
-        imageAlt="Bitburner – Hacknet Node Manager"
-    />
-    <ProjectEntry
-        imageLeft={false}
-        tag="Learnings"
-        title="Was ich mitgenommen habe"
-        text="Was hast du durch das Projekt gelernt? Welche Übertragungen auf echte Projekte gibt es? Platzhalter – hier kommt dein echter Inhalt hin."
-        imageSrc={bitburnerFirm}
-        imageAlt="Bitburner – Firma Manager"
-    />
+    <section class="project-entry project-entry--image-left">
+        <div class="project-entry-media">
+            <Image
+                src={bitburnerTerminal}
+                alt="Bitburner – Terminal"
+                width={1600}
+                height={1000}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 50vw"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Was ist Bitburner?</h4>
+            <ul class="project-entry-list">
+                <li>
+                    Bitburner ist ein automatisiertes Programming Game, in dem
+                    JavaScript-Programme direkt den Spielverlauf steuern.
+                </li>
+                <li>
+                    Ein großer Fokus liegt auf Geldverdienst, Automatisierung,
+                    eigener Strategie und der Optimierung von Ressourcen.
+                </li>
+                <li>
+                    Dabei entstehen schnell einzelne Tools für GO spielen,
+                    Firmenmanagement, Gangmanagement, Aktienhandel,
+                    Serververwaltung und langfristige Spielplanung.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-right">
+        <div class="project-entry-media">
+            <Image
+                src={bitburnerCode}
+                alt="Bitburner Codeblock Controller"
+                width={1600}
+                height={1000}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 50vw"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Die Scripts</h4>
+            <ul class="project-entry-list">
+                <li>
+                    Ich habe Aufgaben wie Hacking, GO, Aktie, Server-Auslastung
+                    und Ressourcenmanagement automatisiert.
+                </li>
+                <li>
+                    Die Scripts sind modular aufgebaut, damit sie einfach
+                    erweitert und die Spielserver maximal ausgelastet werden
+                    können.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-left">
+        <div class="project-entry-media">
+            <Image
+                src={bitburnerHacknet}
+                alt="Bitburner Hacknet Node Manager"
+                width={1600}
+                height={1000}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 50vw"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Der Ansatz</h4>
+            <ul class="project-entry-list">
+                <li>
+                    Die Strategie lag auf Effizienz: Geld immer optimal nutzen,
+                    Server optimal auslasten und langfristig skalieren.
+                </li>
+                <li>
+                    Zusaetzliche optionale Tools wie GO-Spiel, Firmenmanagement,
+                    Gangmanagement und Aktienhandel wurden zusätzlich gescriptet
+                    um Boni zu erhalten.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-entry project-entry--image-right">
+        <div class="project-entry-media">
+            <Image
+                src={bitburnerFirm}
+                alt="Bitburner Firma Manager"
+                width={1600}
+                height={1000}
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 50vw"
+            />
+        </div>
+        <div class="project-entry-content">
+            <h4>Was ich mitgenommen habe</h4>
+            <ul class="project-entry-list">
+                <li>
+                    Das Projekt zeigte, wie wichtig die Optimierung von
+                    Speicherplatz, Serverplatz und Ressourcenmanagement ist.
+                </li>
+            </ul>
+        </div>
+    </section>
 </BaseLayout>
