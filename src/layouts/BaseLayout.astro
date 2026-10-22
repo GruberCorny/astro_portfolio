@@ -3,12 +3,6 @@ import Navbar from "../components/Navbar.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import "../styles/global.css";
 import faviconImage from "../../assets/profile-favicon-square.jpg";
-
-interface Props {
-    title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <html lang="de">
@@ -17,9 +11,10 @@ const { title } = Astro.props;
         <link rel="icon" type="image/jpeg" href={faviconImage.src} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-    </head>
-    <body id="top">
+        <meta property="og:title" content="Cornelius Gruber Portfolio" />
+        <meta property="og:description" content="Cornelius Gruber Portfolio" />
+        <meta property="og:image" content={faviconImage.src} />
+    </head><body id="top">
         <Navbar />
         <main>
             <slot />
