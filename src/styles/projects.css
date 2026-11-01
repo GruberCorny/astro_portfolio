@@ -2,9 +2,9 @@
     padding: 3rem 0 2.5rem;
     border-bottom: 1px solid var(--border);
 
-        display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
 }
 
 
@@ -39,6 +39,15 @@
     color: var(--text-muted);
     max-width: none;
     width: 100%;
+}
+
+.project-entry-media.white {
+    padding: 1rem;
+    background: #fff;
+}
+.project-entry-media.dark {
+    padding: 1rem;
+    background: #000;
 }
 
 /* ── Alternating entry layout ── */
