@@ -1,3 +1,24 @@
+@layer normalize, reset, font, colors, layout;
+
+@import url("./normalize.css") layer(normalize);
+@import url("./reset.css") layer(reset);
+
+@font-face {
+    font-family: 'Noto Sans Custom';
+    src: url('../../assets/fonts/noto-sans/NotoSans-VariableFont_wdth-wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Custom';
+    src: url('../../assets/fonts/noto-sans/NotoSans-Italic-VariableFont_wdth-wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 /* ── Organic Tech Design System ── */
 :root {
     /* Brand Colors */
@@ -35,6 +56,7 @@
     --perfect-fifth: 1.50;
     --golden-ratio: 1.618;
     --ratio: var(--perfect-fourth);
+    --font-sans: 'Noto Sans Custom', system-ui, -apple-system, sans-serif;
 
 }
 
@@ -135,11 +157,18 @@ html {
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: var(--font-sans);
     background: var(--bg);
     color: var(--text);
     line-height: 1.65;
     transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
 }
 
 body {
