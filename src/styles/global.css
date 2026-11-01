@@ -59,7 +59,8 @@
     --font-sans: 'Noto Sans Custom', system-ui, -apple-system, sans-serif;
 
     ::selection {
-        background: var(--color-mint-glow);
+        color: contrast-color(oklch(from var(--color-mint) l c h / 90%));
+        background: oklch(from var(--color-mint) l c h / 90%);
     }
 }
 
