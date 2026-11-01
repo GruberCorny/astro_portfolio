@@ -49,7 +49,7 @@ header {
 }
 
 .nav-links a,
-.dropdown,
+.dropdown p,
 .dropdown-toggle {
     color: var(--nav-text);
     text-decoration: none;

@@ -36,7 +36,6 @@
     --golden-ratio: 1.618;
     --ratio: var(--perfect-fourth);
 
-
 }
 
 :root[data-theme="dark"] {
