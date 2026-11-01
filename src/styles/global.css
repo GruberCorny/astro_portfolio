@@ -58,6 +58,9 @@
     --ratio: var(--perfect-fourth);
     --font-sans: 'Noto Sans Custom', system-ui, -apple-system, sans-serif;
 
+    ::selection {
+        background: var(--color-mint-glow);
+    }
 }
 
 :root[data-theme="dark"] {
