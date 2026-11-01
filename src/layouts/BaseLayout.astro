@@ -7,6 +7,21 @@ import faviconImage from "../../assets/profile-favicon-square.jpg";
 
 <html lang="de">
     <head>
+        <script is:inline>
+            (() => {
+                try {
+                    const savedTheme = localStorage.getItem("theme");
+                    if (savedTheme === "dark" || savedTheme === "light") {
+                        document.documentElement.setAttribute(
+                            "data-theme",
+                            savedTheme,
+                        );
+                    }
+                } catch {
+                }
+            })();
+        </script>
+
         <meta charset="utf-8" />
         <link rel="icon" type="image/jpeg" href={faviconImage.src} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
