@@ -8,18 +8,10 @@ import faviconImage from "../../assets/profile-favicon-square.jpg";
 <html lang="de">
     <head>
         <script is:inline>
-            (() => {
-                try {
-                    const savedTheme = localStorage.getItem("theme");
-                    if (savedTheme === "dark" || savedTheme === "light") {
-                        document.documentElement.setAttribute(
-                            "data-theme",
-                            savedTheme,
-                        );
-                    }
-                } catch {
-                }
-            })();
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark" || savedTheme === "light") {
+                document.documentElement.setAttribute("data-theme", savedTheme);
+            }
         </script>
 
         <meta charset="utf-8" />
