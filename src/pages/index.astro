@@ -1,12 +1,41 @@
 ---
-import { Picture, type ImageMetadata } from "astro:assets";
+import { Image, Picture, type ImageMetadata } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/home.css";
+import "../styles/about.css";
 
 import appPreview from "../../assets/App/dobble_App.png";
 import bitburnerPreview from "../../assets/bitburner/center_code.png";
 import revxtPreview from "../../assets/RevXT/fritz-feature_map_encoding.png";
 import profileImage from "../../assets/profile.jpg";
+import sproutIcon from "../../assets/icons/sprout.svg";
+import brainIcon from "../../assets/icons/brain-circuit.svg";
+import stoneIcon from "../../assets/icons/stone.svg";
+import shieldIcon from "../../assets/icons/shield-check.svg";
+import htmlIcon from "../../assets/logos/html-5-no-wordmark-svgrepo-com.svg";
+import cssIcon from "../../assets/logos/CSS-Logo.svg";
+import jsIcon from "../../assets/logos/js-svgrepo-com.svg";
+import tsIcon from "../../assets/logos/typescript-icon-svgrepo-com.svg";
+import astroIcon from "../../assets/logos/astro-original.svg";
+import cIcon from "../../assets/logos/c-svgrepo-com.svg";
+import javaIcon from "../../assets/logos/java-svgrepo-com.svg";
+import kotlinIcon from "../../assets/logos/Kotlin_icon_(2021-present).svg";
+import pythonIcon from "../../assets/logos/python-svgrepo-com.svg";
+import sqlIcon from "../../assets/logos/sql-database-generic-svgrepo-com.svg";
+import asmIcon from "../../assets/logos/asm-icon.svg";
+import arduinoIcon from "../../assets/logos/arduino-svgrepo-com.svg";
+import fritzingIcon from "../../assets/logos/fritzing.svg";
+import atmelIcon from "../../assets/logos/AtmelStudio-Logos/AtmelStudio-Bug-White-With-BG.svg";
+import gitIcon from "../../assets/logos/git-icon-svgrepo-com.svg";
+import vscodeIcon from "../../assets/logos/vs-code-svgrepo-com.svg";
+import bashIcon from "../../assets/logos/bash-icon-svgrepo-com.svg";
+import dockerIcon from "../../assets/logos/docker-svgrepo-com.svg";
+import godotIcon from "../../assets/logos/godot-original.svg";
+import leafIcon from "../../assets/logos/leaf.svg";
+import guitarIcon from "../../assets/logos/guitar.svg";
+import gamepadIcon from "../../assets/logos/gamepad-2.svg";
+import bookTextIcon from "../../assets/logos/book-text.svg";
+import settingsIcon from "../../assets/logos/settings.svg";
 
 const projects: Array<{
 	category: string;
@@ -61,7 +90,7 @@ const projects: Array<{
 				>.
 			</p>
 			<div class="hero-cta">
-				<a href="/about" class="btn-primary">Mehr über mich</a>
+				<a href="#about-me" class="btn-primary">Mehr über mich</a>
 				<a href="/projects/app-entwicklung" class="btn-secondary"
 					>Projekte ansehen</a
 				>
@@ -152,6 +181,388 @@ const projects: Array<{
 			>
 				&#8250;
 			</button>
+		</div>
+	</section>
+
+	<section class="personality-section">
+		<h2>Persönlichkeit & Werte</h2>
+		<div class="traits-grid">
+			<div class="trait-card">
+				<div class="trait-icon">
+					<Image
+						loading="eager"
+						src={sproutIcon}
+						alt="Sprout"
+						width={30}
+						height={30}
+						quality={100}
+					/>
+				</div>
+				<h3>Bodenständig</h3>
+				<p>
+					Kein Hype, kein Overengineering. Alles solide und wartbar.
+				</p>
+			</div>
+			<div class="trait-card">
+				<div class="trait-icon">
+					<Image
+						loading="eager"
+						src={brainIcon}
+						alt="Brain"
+						width={30}
+						height={30}
+						quality={100}
+					/>
+				</div>
+				<h3>Neugierig</h3>
+				<p>
+					Wenn ich etwas nicht verstehe, finde ich heraus, wie es
+					funktioniert.
+				</p>
+			</div>
+			<div class="trait-card">
+				<div class="trait-icon">
+					<Image
+						loading="eager"
+						src={stoneIcon}
+						alt="Stone"
+						width={30}
+						height={30}
+						quality={100}
+					/>
+				</div>
+				<h3>Ruhig & Gelassen</h3>
+				<p>Sorgfältiges Arbeiten spart Zeit und Nerven.</p>
+			</div>
+			<div class="trait-card">
+				<div class="trait-icon">
+					<Image
+						loading="eager"
+						src={shieldIcon}
+						alt="Shield"
+						width={30}
+						height={30}
+						quality={100}
+					/>
+				</div>
+				<h3>Ehrlich</h3>
+				<p>Eine zuverlässige Antwort, ist mehr wert als viele Worte.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="skills-section">
+		<h2>Hard Skills & Werkzeuge</h2>
+		<div class="skills-columns">
+			<div class="skills-group">
+				<h3>Frontend</h3>
+				<ul class="skill-list">
+					<li class="skill-item">
+						<span>HTML</span>
+						<div class="skill-logos">
+							<Image
+								loading="eager"
+								src={htmlIcon}
+								alt="HTML5"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>CSS</span>
+						<div class="skill-logos">
+							<Image
+								loading="eager"
+								src={cssIcon}
+								alt="CSS3"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>JavaScript</span>
+						<div class="skill-logos">
+							<Image
+								loading="eager"
+								src={jsIcon}
+								alt="JavaScript"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>TypeScript</span>
+						<div class="skill-logos">
+							<Image
+								src={tsIcon}
+								alt="TypeScript"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Astro</span>
+						<div class="skill-logos">
+							<Image
+								src={astroIcon}
+								alt="Astro"
+								width={22}
+								height={22}
+								quality={100}
+								class="logo-dark"
+							/>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="skills-group">
+				<h3>Backend & Systems</h3>
+				<ul class="skill-list">
+					<li class="skill-item">
+						<span>C</span><div class="skill-logos">
+							<Image
+								loading="eager"
+								src={cIcon}
+								alt="C"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Java</span><div class="skill-logos">
+							<Image
+								loading="eager"
+								src={javaIcon}
+								alt="Java"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Kotlin</span><div class="skill-logos">
+							<Image
+								loading="eager"
+								src={kotlinIcon}
+								alt="Kotlin"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Python</span><div class="skill-logos">
+							<Image
+								src={pythonIcon}
+								alt="Python"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>SQL</span><div class="skill-logos">
+							<Image
+								src={sqlIcon}
+								alt="SQL"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="skills-group">
+				<h3>Embedded</h3>
+				<ul class="skill-list">
+					<li class="skill-item">
+						<span>Assembly x86</span><div class="skill-logos">
+							<Image
+								src={asmIcon}
+								alt="Assembly x86"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Arduino</span><div class="skill-logos">
+							<Image
+								src={arduinoIcon}
+								alt="Arduino"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Fritzing</span><div class="skill-logos">
+							<Image
+								src={fritzingIcon}
+								alt="Fritzing"
+								width={22}
+								height={22}
+								quality={100}
+								class="logo-dark"
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Atmel / Microchip Studio</span><div
+							class="skill-logos"
+						>
+							<Image
+								src={atmelIcon}
+								alt="Atmel"
+								width={22}
+								height={22}
+								quality={100}
+								class="logo-dark"
+							/>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="skills-group">
+				<h3>Tools</h3>
+				<ul class="skill-list">
+					<li class="skill-item">
+						<span>Git</span><div class="skill-logos">
+							<Image
+								src={gitIcon}
+								alt="Git"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>VS Code</span><div class="skill-logos">
+							<Image
+								src={vscodeIcon}
+								alt="VS Code"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Bash</span><div class="skill-logos">
+							<Image
+								src={bashIcon}
+								alt="Bash"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Docker</span><div class="skill-logos">
+							<Image
+								src={dockerIcon}
+								alt="Docker"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+					<li class="skill-item">
+						<span>Godot Engine</span><div class="skill-logos">
+							<Image
+								src={godotIcon}
+								alt="Godot"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="interests-section">
+		<h2>Was mich bewegt</h2>
+		<div class="interests-grid">
+			<span class="interest-tag"
+				><div class="hobby-logos">
+					<Image
+						src={leafIcon}
+						alt="Natur"
+						width={22}
+						height={22}
+						quality={100}
+					/>
+				</div><p>Natur & Landwirtschaft</p></span
+			>
+			<span class="interest-tag"
+				><div class="hobby-logos">
+					<Image
+						src={guitarIcon}
+						alt="Gitarre"
+						width={22}
+						height={22}
+						quality={100}
+					/>
+				</div><p>Gitarre</p></span
+			>
+			<span class="interest-tag"
+				><div class="hobby-logos">
+					<Image
+						src={gamepadIcon}
+						alt="Spiele"
+						width={22}
+						height={22}
+						quality={100}
+					/>
+				</div><p>Videospiele</p></span
+			>
+			<span class="interest-tag"
+				><div class="hobby-logos">
+					<Image
+						src={bookTextIcon}
+						alt="Neues Lernen"
+						width={22}
+						height={22}
+						quality={100}
+					/>
+				</div><p>Lesen</p></span
+			>
+			<span class="interest-tag"
+				><div class="hobby-logos">
+					<Image
+						src={settingsIcon}
+						alt="Basteln"
+						width={22}
+						height={22}
+						quality={100}
+					/>
+				</div><p>Basteln & Hardware</p></span
+			>
 		</div>
 	</section>
 </BaseLayout>
