@@ -508,8 +508,8 @@ const projects: Array<{
 	<section class="interests-section">
 		<h2>Was mich bewegt</h2>
 		<div class="interests-grid">
-			<span class="interest-tag"
-				><div class="hobby-logos">
+			<div class="interest-tag interest-tag--detail">
+				<div class="hobby-logos">
 					<Image
 						src={leafIcon}
 						alt="Natur"
@@ -517,10 +517,18 @@ const projects: Array<{
 						height={22}
 						quality={100}
 					/>
-				</div><p>Natur & Landwirtschaft</p></span
-			>
-			<span class="interest-tag"
-				><div class="hobby-logos">
+				</div>
+				<div class="interest-text">
+					<p class="interest-title">Natur & Landwirtschaft</p>
+					<p class="interest-copy">
+						Die Arbeit auf dem Bauernhof hat mich geprägt:
+						strukturiert, vorausschauend und mit einem klaren Blick
+						dafür, was verlässlich funktionieren muss.
+					</p>
+				</div>
+			</div>
+			<div class="interest-tag interest-tag--detail">
+				<div class="hobby-logos">
 					<Image
 						src={guitarIcon}
 						alt="Gitarre"
@@ -528,10 +536,18 @@ const projects: Array<{
 						height={22}
 						quality={100}
 					/>
-				</div><p>Gitarre</p></span
-			>
-			<span class="interest-tag"
-				><div class="hobby-logos">
+				</div>
+				<div class="interest-text">
+					<p class="interest-title">Gitarre</p>
+					<p class="interest-copy">
+						Musik ist mein Ausgleich zum Coden. Sie hilft mir,
+						Fokus, Rhythmus und Geduld zu halten, gerade bei
+						längeren Entwicklungsphasen.
+					</p>
+				</div>
+			</div>
+			<div class="interest-tag interest-tag--detail">
+				<div class="hobby-logos">
 					<Image
 						src={gamepadIcon}
 						alt="Spiele"
@@ -539,10 +555,18 @@ const projects: Array<{
 						height={22}
 						quality={100}
 					/>
-				</div><p>Videospiele</p></span
-			>
-			<span class="interest-tag"
-				><div class="hobby-logos">
+				</div>
+				<div class="interest-text">
+					<p class="interest-title">Videospiele</p>
+					<p class="interest-copy">
+						Spiele inspirieren mich bei UI, Feedback-Mechaniken und
+						Systemdesign. Viele Projektideen entstehen aus solchen
+						interaktiven Konzepten.
+					</p>
+				</div>
+			</div>
+			<div class="interest-tag interest-tag--detail">
+				<div class="hobby-logos">
 					<Image
 						src={bookTextIcon}
 						alt="Neues Lernen"
@@ -550,10 +574,18 @@ const projects: Array<{
 						height={22}
 						quality={100}
 					/>
-				</div><p>Lesen</p></span
-			>
-			<span class="interest-tag"
-				><div class="hobby-logos">
+				</div>
+				<div class="interest-text">
+					<p class="interest-title">Lesen</p>
+					<p class="interest-copy">
+						Ich lese gerne über Technik, Denkmodelle und
+						Praxiswissen, das ich direkt in Projekte übernehmen und
+						ausprobieren kann.
+					</p>
+				</div>
+			</div>
+			<div class="interest-tag interest-tag--detail">
+				<div class="hobby-logos">
 					<Image
 						src={settingsIcon}
 						alt="Basteln"
@@ -561,8 +593,16 @@ const projects: Array<{
 						height={22}
 						quality={100}
 					/>
-				</div><p>Basteln & Hardware</p></span
-			>
+				</div>
+				<div class="interest-text">
+					<p class="interest-title">Basteln & Hardware</p>
+					<p class="interest-copy">
+						Vom Löten bis zum Prototypen: ich mag es, Ideen nicht
+						nur zu planen, sondern sie greifbar zu machen und
+						iterativ zu verbessern.
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 </BaseLayout>

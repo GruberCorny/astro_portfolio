@@ -9,6 +9,10 @@ import arduinoIcon from "../../../assets/logos/arduino-svgrepo-com.svg";
 import fritzingIcon from "../../../assets/logos/fritzing.svg";
 import atmelIcon from "../../../assets/logos/AtmelStudio-Logos/AtmelStudio-Bug-White-With-BG.svg";
 import vscodeIcon from "../../../assets/logos/vs-code-svgrepo-com.svg";
+import emKastenImage from "../../../assets/EM/emkasten.jpg";
+import ketenRoboTopImage from "../../../assets/EM/ketenrobooben.jpg";
+import atmelStudioImage from "../../../assets/EM/atmelstudiovoll.png";
+import resultImage from "../../../assets/EM/IMG_20261031_162639778.jpg";
 ---
 
 <BaseLayout title="Embedded Systems – Corny Gruber">
@@ -60,13 +64,20 @@ import vscodeIcon from "../../../assets/logos/vs-code-svgrepo-com.svg";
             >
         </div>
         <p class="project-description">
-            Microcontroller, Low-Level-Programmierung und Hardware-nahe Software.
+            Microcontroller, Low-Level-Programmierung und Hardware-nahe
+            Software.
         </p>
     </div>
 
     <section class="project-entry project-entry--image-left">
         <div class="project-entry-media">
-            <div class="project-entry-placeholder" aria-hidden="true"></div>
+            <Image
+                loading="eager"
+                src={emKastenImage}
+                alt="Embedded-System Aufbau im Kasten"
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 680px"
+            />
         </div>
         <div class="project-entry-content">
             <h4>Das Problem</h4>
@@ -80,7 +91,12 @@ import vscodeIcon from "../../../assets/logos/vs-code-svgrepo-com.svg";
 
     <section class="project-entry project-entry--image-right">
         <div class="project-entry-media">
-            <div class="project-entry-placeholder" aria-hidden="true"></div>
+            <Image
+                src={ketenRoboTopImage}
+                alt="Draufsicht auf Schaltung und Verkabelung"
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 680px"
+            />
         </div>
         <div class="project-entry-content">
             <h4>Die Schaltung</h4>
@@ -94,7 +110,12 @@ import vscodeIcon from "../../../assets/logos/vs-code-svgrepo-com.svg";
 
     <section class="project-entry project-entry--image-left">
         <div class="project-entry-media">
-            <div class="project-entry-placeholder" aria-hidden="true"></div>
+            <Image
+                src={atmelStudioImage}
+                alt="Code in Atmel Studio"
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 680px"
+            />
         </div>
         <div class="project-entry-content">
             <h4>Der Code</h4>
@@ -108,7 +129,12 @@ import vscodeIcon from "../../../assets/logos/vs-code-svgrepo-com.svg";
 
     <section class="project-entry project-entry--image-right">
         <div class="project-entry-media">
-            <div class="project-entry-placeholder" aria-hidden="true"></div>
+            <Image
+                src={resultImage}
+                alt="Fertiges Embedded-System Ergebnis"
+                quality={90}
+                sizes="(max-width: 720px) 100vw, 680px"
+            />
         </div>
         <div class="project-entry-content">
             <h4>Was dabei entstanden ist</h4>
