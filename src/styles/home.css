@@ -358,12 +358,27 @@
 }
 
 /* Home-specific detailed interest cards */
+.interests-section .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
 .interests-section .interest-tag--detail {
-    width: min(100%, 540px);
+    width: auto;
+    grid-column: span 2;
     border-radius: var(--radius);
     padding: 0.85rem 1rem;
     align-items: flex-start;
     gap: 0.75rem;
+}
+
+.interests-section .interest-tag--detail:nth-child(4) {
+    grid-column: 1 / span 3;
+}
+
+.interests-section .interest-tag--detail:nth-child(5) {
+    grid-column: 4 / span 3;
 }
 
 .interests-section .interest-tag--detail .hobby-logos {
@@ -390,7 +405,26 @@
 }
 
 @media (max-width: 720px) {
+    .interests-section .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
     .interests-section .interest-tag--detail {
         width: 100%;
+        grid-column: auto;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 980px) {
+    .interests-section .interests-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .interests-section .interest-tag--detail {
+        grid-column: auto;
+    }
+
+    .interests-section .interest-tag--detail:nth-child(5) {
+        grid-column: 1 / -1;
     }
 }
