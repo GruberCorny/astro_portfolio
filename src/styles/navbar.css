@@ -293,8 +293,7 @@ body.nav-open {
     gap: 0.25rem;
 }
 
-#mobile-nav a,
-.mobile-submenu-toggle {
+#mobile-nav a {
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -313,29 +312,10 @@ body.nav-open {
     transition: background 300ms, color 300ms;
 }
 
-#mobile-nav a:hover,
-.mobile-submenu-toggle:hover {
+#mobile-nav a:hover {
     background: var(--nav-hover);
     color: var(--color-mint, #52c47a);
     opacity: 1;
-}
-
-.mobile-submenu {
-    display: none;
-    padding-left: 1rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-}
-
-.mobile-submenu.open {
-    display: -webkit-box;
-    display: flex;
-}
-
-.mobile-submenu a {
-    font-size: 0.9rem;
-    color: var(--text-muted, #5a7060);
 }
 
 /* ── Responsive ── */
