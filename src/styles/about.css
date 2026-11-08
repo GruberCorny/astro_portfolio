@@ -126,7 +126,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr) minmax(10rem, 1fr));
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .favorite-tools-item {
