@@ -25,7 +25,6 @@
     --color-forest: oklch(28.726% 0.03653 153.166);
     --color-sage: oklch(58.681% 0.08452 146.433);
     --color-mint: oklch(73.608% 0.14937 152.425);
-    /*TODO: from main color */
     --color-mint-glow: oklch(73.608% 0.14937 152.425 / 0.22);
 
     /* Surface */
@@ -44,7 +43,7 @@
     --radius-sm: 8px;
 
     /* Layout */
-    --content-width: 84rem;
+    --content-width: 90rem;
 
     /* Transitions */
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -191,10 +190,6 @@ a {
     transition: opacity var(--dur) var(--ease);
 }
 
-a:hover {
-    opacity: 0.75;
-}
-
 main {
     max-width: var(--content-width);
     margin: 0 auto;
@@ -237,11 +232,6 @@ button {
         transform 180ms ease;
 }
 
-.card:hover {
-    box-shadow: 0 10px 24px rgba(28, 48, 34, 0.12);
-    transform: translateY(-2px);
-}
-
 .badge {
     display: inline-block;
     background: var(--bg-subtle);
@@ -261,9 +251,6 @@ button {
 
 
 
-
-
-/*#region: Footer  TODO: anoter file*/
 .site-footer {
     margin-top: 4rem;
     background: linear-gradient(180deg, rgba(28, 48, 34, 0.97), rgba(19, 32, 24, 1));
@@ -275,9 +262,11 @@ button {
     max-width: 1100px;
     margin: 0 auto;
     padding: 3rem 1.5rem 1.2rem;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     gap: 2rem;
+
 }
 
 .footer-brand h3,

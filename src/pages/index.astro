@@ -83,17 +83,18 @@ const projects: Array<{
 				<h1 class="hero-title">Cornelius Gruber</h1>
 			</hgroup>
 			<p class="hero-subtitle">
-				Ich entwickle gerne an Hardwarenahen Projekten wie <b
+				Ich entwickle gerne an hardwarenahen Projekten wie <b
 					>Embedded-Systemen</b
-				> aber habe auch gerne Visuelles Feedback von <b
+				> aber habe auch gerne visuelles Feedback von <b
 					>Webanwendungen und Apps</b
 				>.
 			</p>
-			<div class="hero-cta">
-				<a href="#about-me" class="btn-primary">Mehr über mich</a>
-				<a href="/projects/app-entwicklung" class="btn-secondary"
-					>Projekte ansehen</a
-				>
+			<div class="skills-strip">
+				<span class="badge">Embedded Systems</span>
+				<span class="badge">C</span>
+				<span class="badge">Java</span>
+				<span class="badge">Kotlin</span>
+				<span class="badge">Assembly x86</span>
 			</div>
 		</div>
 		<div class="hero-visual">
@@ -102,21 +103,10 @@ const projects: Array<{
 				src={profileImage}
 				alt="Corny Gruber"
 				class="hero-avatar"
-				width={220}
-				height={220}
-				widths={[220, 440]}
-				sizes="(max-width: 720px) 160px, 220px"
+				widths={[220, 440, 600]}
 				formats={["avif", "webp", "jpeg"]}
 				quality={80}
 			/>
-		</div>
-		<div class="skills-strip">
-			<span class="badge">Embedded Systems</span>
-			<span class="badge">C</span>
-			<span class="badge">Java</span>
-			<span class="badge">Kotlin</span>
-			<span class="badge">Assembly x86</span>
-			<span class="badge">Godot</span>
 		</div>
 	</section>
 
@@ -184,78 +174,56 @@ const projects: Array<{
 		</div>
 	</section>
 
-	<section class="personality-section">
-		<h2>Persönlichkeit & Werte</h2>
-		<div class="traits-grid">
-			<div class="trait-card">
-				<div class="trait-icon">
-					<Image
-						loading="eager"
-						src={sproutIcon}
-						alt="Sprout"
-						width={30}
-						height={30}
-						quality={100}
-					/>
-				</div>
-				<h3>Bodenständig</h3>
-				<p>
-					Kein Hype, kein Overengineering. Alles solide und wartbar.
-				</p>
-			</div>
-			<div class="trait-card">
-				<div class="trait-icon">
-					<Image
-						loading="eager"
-						src={brainIcon}
-						alt="Brain"
-						width={30}
-						height={30}
-						quality={100}
-					/>
-				</div>
-				<h3>Neugierig</h3>
-				<p>
-					Wenn ich etwas nicht verstehe, finde ich heraus, wie es
-					funktioniert.
-				</p>
-			</div>
-			<div class="trait-card">
-				<div class="trait-icon">
-					<Image
-						loading="eager"
-						src={stoneIcon}
-						alt="Stone"
-						width={30}
-						height={30}
-						quality={100}
-					/>
-				</div>
-				<h3>Ruhig & Gelassen</h3>
-				<p>Sorgfältiges Arbeiten spart Zeit und Nerven.</p>
-			</div>
-			<div class="trait-card">
-				<div class="trait-icon">
-					<Image
-						loading="eager"
-						src={shieldIcon}
-						alt="Shield"
-						width={30}
-						height={30}
-						quality={100}
-					/>
-				</div>
-				<h3>Ehrlich</h3>
-				<p>Eine zuverlässige Antwort, ist mehr wert als viele Worte.</p>
-			</div>
-		</div>
-	</section>
-
 	<section class="skills-section">
 		<h2>Hard Skills & Werkzeuge</h2>
+		<div class="skills-top">
+			<h3 class="h6">Lieblings Tools</h3>
+			<ul class="favorite-tools">
+				<li class="favorite-tools-item">
+					<Image
+						src={cIcon}
+						alt="C"
+						width={64}
+						height={64}
+						quality={100}
+					/>
+					<p>C</p>
+				</li>
+				<li class="favorite-tools-item">
+					<Image
+						src={javaIcon}
+						alt="Java"
+						width={64}
+						height={64}
+						quality={100}
+					/>
+					<p>Java</p>
+				</li>
+				<li class="favorite-tools-item">
+					<Image
+						src={asmIcon}
+						alt="Assembly"
+						width={64}
+						height={64}
+						quality={100}
+					/>
+					<p>Assembly</p>
+				</li>
+				<li class="favorite-tools-item">
+					<Image
+						src={vscodeIcon}
+						alt="VS Code"
+						width={64}
+						height={64}
+						quality={100}
+					/>
+					<p>VS Code</p>
+				</li>
+			</ul>
+		</div>
 		<div class="skills-columns">
 			<div class="skills-group">
-				<h3>Frontend</h3>
+				<h3 class="p">Frontend</h3>
 				<ul class="skill-list">
 					<li class="skill-item">
 						<span>HTML</span>
@@ -296,61 +264,12 @@ const projects: Array<{
 							/>
 						</div>
 					</li>
-					<li class="skill-item">
-						<span>TypeScript</span>
-						<div class="skill-logos">
-							<Image
-								src={tsIcon}
-								alt="TypeScript"
-								width={22}
-								height={22}
-								quality={100}
-							/>
-						</div>
-					</li>
-					<li class="skill-item">
-						<span>Astro</span>
-						<div class="skill-logos">
-							<Image
-								src={astroIcon}
-								alt="Astro"
-								width={22}
-								height={22}
-								quality={100}
-								class="logo-dark"
-							/>
-						</div>
-					</li>
 				</ul>
 			</div>
 
 			<div class="skills-group">
-				<h3>Backend & Systems</h3>
+				<h3 class="p">Backend & Systems</h3>
 				<ul class="skill-list">
-					<li class="skill-item">
-						<span>C</span><div class="skill-logos">
-							<Image
-								loading="eager"
-								src={cIcon}
-								alt="C"
-								width={22}
-								height={22}
-								quality={100}
-							/>
-						</div>
-					</li>
-					<li class="skill-item">
-						<span>Java</span><div class="skill-logos">
-							<Image
-								loading="eager"
-								src={javaIcon}
-								alt="Java"
-								width={22}
-								height={22}
-								quality={100}
-							/>
-						</div>
-					</li>
 					<li class="skill-item">
 						<span>Kotlin</span><div class="skill-logos">
 							<Image
@@ -389,16 +308,19 @@ const projects: Array<{
 			</div>
 
 			<div class="skills-group">
-				<h3>Embedded</h3>
+				<h3 class="p">Embedded</h3>
 				<ul class="skill-list">
 					<li class="skill-item">
-						<span>Assembly x86</span><div class="skill-logos">
+						<span>Atmel / Microchip Studio</span><div
+							class="skill-logos"
+						>
 							<Image
-								src={asmIcon}
-								alt="Assembly x86"
+								src={atmelIcon}
+								alt="Atmel"
 								width={22}
 								height={22}
 								quality={100}
+								class="logo-dark"
 							/>
 						</div>
 					</li>
@@ -425,42 +347,17 @@ const projects: Array<{
 							/>
 						</div>
 					</li>
-					<li class="skill-item">
-						<span>Atmel / Microchip Studio</span><div
-							class="skill-logos"
-						>
-							<Image
-								src={atmelIcon}
-								alt="Atmel"
-								width={22}
-								height={22}
-								quality={100}
-								class="logo-dark"
-							/>
-						</div>
-					</li>
 				</ul>
 			</div>
 
 			<div class="skills-group">
-				<h3>Tools</h3>
+				<h3 class="p">Tools</h3>
 				<ul class="skill-list">
 					<li class="skill-item">
 						<span>Git</span><div class="skill-logos">
 							<Image
 								src={gitIcon}
 								alt="Git"
-								width={22}
-								height={22}
-								quality={100}
-							/>
-						</div>
-					</li>
-					<li class="skill-item">
-						<span>VS Code</span><div class="skill-logos">
-							<Image
-								src={vscodeIcon}
-								alt="VS Code"
 								width={22}
 								height={22}
 								quality={100}
@@ -489,114 +386,176 @@ const projects: Array<{
 							/>
 						</div>
 					</li>
-					<li class="skill-item">
-						<span>Godot Engine</span><div class="skill-logos">
-							<Image
-								src={godotIcon}
-								alt="Godot"
-								width={22}
-								height={22}
-								quality={100}
-							/>
-						</div>
-					</li>
 				</ul>
 			</div>
 		</div>
 	</section>
 
-	<section class="interests-section">
-		<h2>Was mich bewegt</h2>
-		<div class="interests-grid">
-			<div class="interest-tag interest-tag--detail">
-				<div class="hobby-logos">
-					<Image
-						src={leafIcon}
-						alt="Natur"
-						width={22}
-						height={22}
-						quality={100}
-					/>
+	<section class="personality-section">
+		<h2>Persönlichkeit & Werte</h2>
+		<div class="traits">
+			<h3 class="p">Werte</h3>
+			<div class="traits-grid">
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							loading="eager"
+							src={sproutIcon}
+							alt="Sprout"
+							width={30}
+							height={30}
+							quality={100}
+						/>
+					</div>
+					<h4>Bodenständig</h4>
+					<p>
+						Kein Hype, kein Overengineering. Alles solide und
+						wartbar.
+					</p>
 				</div>
-				<div class="interest-text">
-					<p class="interest-title">Natur & Landwirtschaft</p>
-					<p class="interest-copy">
-						Als Ausgleich zur digitalen Welt verbringe ich gerne
-						Zeit im Garten und auf dem Bauernhof.
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							loading="eager"
+							src={brainIcon}
+							alt="Brain"
+							width={30}
+							height={30}
+							quality={100}
+						/>
+					</div>
+					<h4>Neugierig</h4>
+					<p>
+						Wenn ich etwas nicht verstehe, finde ich heraus, wie es
+						funktioniert.
+					</p>
+				</div>
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							loading="eager"
+							src={stoneIcon}
+							alt="Stone"
+							width={30}
+							height={30}
+							quality={100}
+						/>
+					</div>
+					<h4>Ruhig & Gelassen</h4>
+					<p>Sorgfältiges Arbeiten spart Zeit und Nerven.</p>
+				</div>
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							loading="eager"
+							src={shieldIcon}
+							alt="Shield"
+							width={30}
+							height={30}
+							quality={100}
+						/>
+					</div>
+					<h4>Ehrlich</h4>
+					<p>
+						Eine zuverlässige Antwort, ist mehr wert als viele
+						Worte.
 					</p>
 				</div>
 			</div>
-			<div class="interest-tag interest-tag--detail">
-				<div class="hobby-logos">
-					<Image
-						src={guitarIcon}
-						alt="Gitarre"
-						width={22}
-						height={22}
-						quality={100}
-					/>
+		</div>
+		<div class="interests">
+			<h3 class="p">Interessen</h3>
+			<div class="interests-grid">
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							src={leafIcon}
+							alt="Natur"
+							width={22}
+							height={22}
+							quality={100}
+						/>
+					</div>
+					<div class="interest-text">
+						<h4 class="interest-title">Gärtnern & Landwirtschaft</h4>
+						<p class="interest-copy">
+							Als Ausgleich zur digitalen Welt verbringe ich gerne
+							Zeit im Garten und auf dem Bauernhof.
+						</p>
+					</div>
 				</div>
-				<div class="interest-text">
-					<p class="interest-title">Gitarre</p>
-					<p class="interest-copy">
-						Gerne spiele ich Gitarre alleine aber auch zusammen mit
-						einem Freund.
-					</p>
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							src={guitarIcon}
+							alt="Gitarre"
+							width={22}
+							height={22}
+							quality={100}
+						/>
+					</div>
+					<div class="interest-text">
+						<h4 class="interest-title">Gitarre</h4>
+						<p class="interest-copy">
+							Gerne spiele ich Gitarre alleine aber auch zusammen mit
+							einem Freund.
+						</p>
+					</div>
 				</div>
-			</div>
-			<div class="interest-tag interest-tag--detail">
-				<div class="hobby-logos">
-					<Image
-						src={gamepadIcon}
-						alt="Spiele"
-						width={22}
-						height={22}
-						quality={100}
-					/>
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							src={gamepadIcon}
+							alt="Spiele"
+							width={22}
+							height={22}
+							quality={100}
+						/>
+					</div>
+					<div class="interest-text">
+						<h4 class="interest-title">Videospiele</h4>
+						<p class="interest-copy">
+							In meiner Freizeit spiele ich am liebsten
+							Rätsel-Videospiele, treffe mich aber auch gerne für
+							andere Games mit Freunden.
+						</p>
+					</div>
 				</div>
-				<div class="interest-text">
-					<p class="interest-title">Videospiele</p>
-					<p class="interest-copy">
-						In meiner Freizeit spiele ich am liebsten
-						Rätsel-Videospiele, treffe mich aber auch gerne für
-						andere Games mit Freunden.
-					</p>
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							src={bookTextIcon}
+							alt="Neues Lernen"
+							width={22}
+							height={22}
+							quality={100}
+						/>
+					</div>
+					<div class="interest-text">
+						<h4 class="interest-title">Lesen</h4>
+						<p class="interest-copy">
+							Ich lese gerne Englische novels und Bücher zur
+							Persönlichkeitsentwicklung.
+						</p>
+					</div>
 				</div>
-			</div>
-			<div class="interest-tag interest-tag--detail">
-				<div class="hobby-logos">
-					<Image
-						src={bookTextIcon}
-						alt="Neues Lernen"
-						width={22}
-						height={22}
-						quality={100}
-					/>
-				</div>
-				<div class="interest-text">
-					<p class="interest-title">Lesen</p>
-					<p class="interest-copy">
-						Ich lese gerne Englische novels und Bücher zur
-						Persönlichkeitsentwicklung.
-					</p>
-				</div>
-			</div>
-			<div class="interest-tag interest-tag--detail">
-				<div class="hobby-logos">
-					<Image
-						src={settingsIcon}
-						alt="Basteln"
-						width={22}
-						height={22}
-						quality={100}
-					/>
-				</div>
-				<div class="interest-text">
-					<p class="interest-title">Basteln & Hardware</p>
-					<p class="interest-copy">
-						Zuhause und auf dem Hof bin ich gerne handwerklich aktiv
-						ob Holzarbeiten oder Schweißen an Landmaschinen.
-					</p>
+				<div class="trait-card">
+					<div class="trait-icon">
+						<Image
+							src={settingsIcon}
+							alt="Basteln"
+							width={22}
+							height={22}
+							quality={100}
+						/>
+					</div>
+					<div class="interest-text">
+						<h4 class="interest-title">Basteln & Hardware</h4>
+						<p class="interest-copy">
+							Zuhause und auf dem Hof bin ich gerne handwerklich aktiv
+							ob Holzarbeiten oder Schweißen an Landmaschinen.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
