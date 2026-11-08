@@ -28,11 +28,15 @@
 
 /* Persönlichkeits-Section */
 .personality-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     margin-top: 4rem;
 }
-
-.personality-section h2 {
-    margin-bottom: 1.5rem;
+.personality-grids{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
 }
 
 .traits-grid {
@@ -77,6 +81,30 @@
     color: var(--text-muted);
 }
 
+.interests {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.interests h3,
+.traits h3 {
+    text-transform: uppercase;
+    color: var(--color-sage);
+    letter-spacing: 0.12em;
+}
+
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.interests-grid .trait-card {
+    flex: 1 1 calc(33% - 1rem);
+    min-width: 30ch;
+}
+
 /* Skills Section */
 .skills-section {
     margin-top: 4rem;
@@ -91,6 +119,7 @@
 .skills-top h3 {
     text-transform: uppercase;
     color: var(--color-sage);
+    letter-spacing: 0.12em;
 }
 
 .favorite-tools {
@@ -120,6 +149,7 @@
 
 .skills-section h2 {
     margin-bottom: 0.5rem;
+
 }
 
 .skills-columns {
@@ -222,10 +252,15 @@
         grid-template-columns: 1fr;
     }
 
+    .interests-grid .trait-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
 }
 
 @media (max-width: 400px) {
     .favorite-tools {
         grid-template-columns: 1fr !important;
     }
+
 }

@@ -293,6 +293,15 @@ body.nav-open {
     gap: 0.25rem;
 }
 
+#mobile-nav .divider {
+    color: var(--color-sage);
+}
+
+#mobile-nav li:has(.divider) {
+    padding: 0;
+    margin-block: -0.5em -1em;
+}
+
 #mobile-nav a {
     display: -webkit-box;
     display: flex;
@@ -300,7 +309,7 @@ body.nav-open {
     align-items: center;
     width: 100%;
     padding: 0.85rem 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--nav-text);
     text-decoration: none;
@@ -333,4 +342,6 @@ body.nav-open {
         display: -webkit-box;
         display: flex;
     }
+
+
 }

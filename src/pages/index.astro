@@ -46,6 +46,15 @@ const projects: Array<{
 	link: string;
 }> = [
 	{
+		category: "System & Künstliche Intelligenz",
+		title: "ReversiXT",
+		description:
+			"Ein technisches Projekt mit klaren Zielen, experimenteller Entwicklung und schnellen Iterationen.",
+		image: revxtPreview,
+		alt: "RevXT – Projektvorschau",
+		link: "/projects/revxt",
+	},
+	{
 		category: "Web & App",
 		title: "App-Entwicklung",
 		description:
@@ -62,15 +71,6 @@ const projects: Array<{
 		image: bitburnerPreview,
 		alt: "Bitburner – Projektvorschau",
 		link: "/projects/bitburner",
-	},
-	{
-		category: "System & Forschung",
-		title: "RevXT",
-		description:
-			"Ein technisches Projekt mit klaren Zielen, experimenteller Entwicklung und schnellen Iterationen.",
-		image: revxtPreview,
-		alt: "RevXT – Projektvorschau",
-		link: "/projects/revxt",
 	},
 ];
 ---
@@ -112,7 +112,6 @@ const projects: Array<{
 
 	<section class="project-showcase" aria-label="Projektvorschau">
 		<hgroup class="section-heading">
-			<p class="eyebrow">Projekte</p>
 			<h2>Kurze Einblicke in meine Arbeiten</h2>
 		</hgroup>
 
@@ -393,168 +392,173 @@ const projects: Array<{
 
 	<section class="personality-section">
 		<h2>Persönlichkeit & Werte</h2>
-		<div class="traits">
-			<h3 class="p">Werte</h3>
-			<div class="traits-grid">
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							loading="eager"
-							src={sproutIcon}
-							alt="Sprout"
-							width={30}
-							height={30}
-							quality={100}
-						/>
+		<div class="personality-grids">
+			<div class="traits">
+				<h3 class="p">Werte</h3>
+				<div class="traits-grid">
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								loading="eager"
+								src={sproutIcon}
+								alt="Sprout"
+								width={30}
+								height={30}
+								quality={100}
+							/>
+						</div>
+						<h4>Bodenständig</h4>
+						<p>
+							Kein Hype, kein Overengineering. Alles solide und
+							wartbar.
+						</p>
 					</div>
-					<h4>Bodenständig</h4>
-					<p>
-						Kein Hype, kein Overengineering. Alles solide und
-						wartbar.
-					</p>
-				</div>
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							loading="eager"
-							src={brainIcon}
-							alt="Brain"
-							width={30}
-							height={30}
-							quality={100}
-						/>
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								loading="eager"
+								src={brainIcon}
+								alt="Brain"
+								width={30}
+								height={30}
+								quality={100}
+							/>
+						</div>
+						<h4>Neugierig</h4>
+						<p>
+							Wenn ich etwas nicht verstehe, finde ich heraus, wie
+							es funktioniert.
+						</p>
 					</div>
-					<h4>Neugierig</h4>
-					<p>
-						Wenn ich etwas nicht verstehe, finde ich heraus, wie es
-						funktioniert.
-					</p>
-				</div>
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							loading="eager"
-							src={stoneIcon}
-							alt="Stone"
-							width={30}
-							height={30}
-							quality={100}
-						/>
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								loading="eager"
+								src={stoneIcon}
+								alt="Stone"
+								width={30}
+								height={30}
+								quality={100}
+							/>
+						</div>
+						<h4>Ruhig & Gelassen</h4>
+						<p>Sorgfältiges Arbeiten spart Zeit und Nerven.</p>
 					</div>
-					<h4>Ruhig & Gelassen</h4>
-					<p>Sorgfältiges Arbeiten spart Zeit und Nerven.</p>
-				</div>
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							loading="eager"
-							src={shieldIcon}
-							alt="Shield"
-							width={30}
-							height={30}
-							quality={100}
-						/>
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								loading="eager"
+								src={shieldIcon}
+								alt="Shield"
+								width={30}
+								height={30}
+								quality={100}
+							/>
+						</div>
+						<h4>Ehrlich</h4>
+						<p>
+							Eine zuverlässige Antwort, ist mehr wert als viele
+							Worte.
+						</p>
 					</div>
-					<h4>Ehrlich</h4>
-					<p>
-						Eine zuverlässige Antwort, ist mehr wert als viele
-						Worte.
-					</p>
 				</div>
 			</div>
-		</div>
-		<div class="interests">
-			<h3 class="p">Interessen</h3>
-			<div class="interests-grid">
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							src={leafIcon}
-							alt="Natur"
-							width={22}
-							height={22}
-							quality={100}
-						/>
+			<div class="interests">
+				<h3 class="p">Interessen</h3>
+				<div class="interests-grid">
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								src={leafIcon}
+								alt="Natur"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+						<div class="interest-text">
+							<h4 class="interest-title">
+								Gärtnern & Landwirtschaft
+							</h4>
+							<p class="interest-copy">
+								Als Ausgleich zur digitalen Welt verbringe ich
+								gerne Zeit im Garten und auf dem Bauernhof.
+							</p>
+						</div>
 					</div>
-					<div class="interest-text">
-						<h4 class="interest-title">Gärtnern & Landwirtschaft</h4>
-						<p class="interest-copy">
-							Als Ausgleich zur digitalen Welt verbringe ich gerne
-							Zeit im Garten und auf dem Bauernhof.
-						</p>
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								src={guitarIcon}
+								alt="Gitarre"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+						<div class="interest-text">
+							<h4 class="interest-title">Gitarre</h4>
+							<p class="interest-copy">
+								Gerne spiele ich Gitarre alleine aber auch
+								zusammen mit einem Freund.
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							src={guitarIcon}
-							alt="Gitarre"
-							width={22}
-							height={22}
-							quality={100}
-						/>
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								src={gamepadIcon}
+								alt="Spiele"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+						<div class="interest-text">
+							<h4 class="interest-title">Videospiele</h4>
+							<p class="interest-copy">
+								In meiner Freizeit spiele ich am liebsten
+								Rätsel-Videospiele, treffe mich aber auch gerne
+								für andere Games mit Freunden.
+							</p>
+						</div>
 					</div>
-					<div class="interest-text">
-						<h4 class="interest-title">Gitarre</h4>
-						<p class="interest-copy">
-							Gerne spiele ich Gitarre alleine aber auch zusammen mit
-							einem Freund.
-						</p>
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								src={bookTextIcon}
+								alt="Neues Lernen"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+						<div class="interest-text">
+							<h4 class="interest-title">Lesen</h4>
+							<p class="interest-copy">
+								Ich lese gerne Englische novels und Bücher zur
+								Persönlichkeitsentwicklung.
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							src={gamepadIcon}
-							alt="Spiele"
-							width={22}
-							height={22}
-							quality={100}
-						/>
-					</div>
-					<div class="interest-text">
-						<h4 class="interest-title">Videospiele</h4>
-						<p class="interest-copy">
-							In meiner Freizeit spiele ich am liebsten
-							Rätsel-Videospiele, treffe mich aber auch gerne für
-							andere Games mit Freunden.
-						</p>
-					</div>
-				</div>
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							src={bookTextIcon}
-							alt="Neues Lernen"
-							width={22}
-							height={22}
-							quality={100}
-						/>
-					</div>
-					<div class="interest-text">
-						<h4 class="interest-title">Lesen</h4>
-						<p class="interest-copy">
-							Ich lese gerne Englische novels und Bücher zur
-							Persönlichkeitsentwicklung.
-						</p>
-					</div>
-				</div>
-				<div class="trait-card">
-					<div class="trait-icon">
-						<Image
-							src={settingsIcon}
-							alt="Basteln"
-							width={22}
-							height={22}
-							quality={100}
-						/>
-					</div>
-					<div class="interest-text">
-						<h4 class="interest-title">Basteln & Hardware</h4>
-						<p class="interest-copy">
-							Zuhause und auf dem Hof bin ich gerne handwerklich aktiv
-							ob Holzarbeiten oder Schweißen an Landmaschinen.
-						</p>
+					<div class="trait-card">
+						<div class="trait-icon">
+							<Image
+								src={settingsIcon}
+								alt="Basteln"
+								width={22}
+								height={22}
+								quality={100}
+							/>
+						</div>
+						<div class="interest-text">
+							<h4 class="interest-title">Basteln & Hardware</h4>
+							<p class="interest-copy">
+								Zuhause und auf dem Hof bin ich gerne
+								handwerklich aktiv ob Holzarbeiten oder
+								Schweißen an Landmaschinen.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
