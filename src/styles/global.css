@@ -55,7 +55,7 @@
     --perfect-fourth: 1.33;
     --perfect-fifth: 1.50;
     --golden-ratio: 1.618;
-    --ratio: var(--perfect-fourth);
+    --ratio: var(--major-third);
     --font-sans: 'Noto Sans Custom', system-ui, -apple-system, sans-serif;
 
     ::selection {
